@@ -1,0 +1,1464 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld25/Ass_GCD/INCA_libs/cds.lib -logfile hal.log worklib.GCD_test:module.
+hal: Snapshot:  worklib.GCD_test:module.
+hal: Workspace: /home/adld25/Ass_GCD.
+hal: Date: Mon Apr 04 16:20:32 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module GCD_test;
+|
+halcheck: *W,LCVARN (./GCD_TB.v,1|0): Module name 'GCD_test' uses uppercase characters.
+module GCD_test;
+|
+halcheck: *W,DIFFMN (./GCD_TB.v,1|0): Module name 'GCD_test' differs from file name 'GCD_TB.v'.
+module GCD_test;
+|
+halcheck: *W,NEEDIO (./GCD_TB.v,1|0): Top-level module 'GCD_test' has no inputs/outputs/inouts.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,CBYNAM (./GCD_TB.v,6|0): Port connections for instance 'DP' of module 'GCD_datapath' should be made by name rather than by positional ordered list.
+controller CON (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halcheck: *W,CBYNAM (./GCD_TB.v,7|0): Port connections for instance 'CON' of module 'controller' should be made by name rather than by positional ordered list.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'sel_in' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'sel2' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'sel1' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'ldB' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,LCVARN (./GCD_TB.v,6|0): Net name 'ldB' uses uppercase characters.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'ldA' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,LCVARN (./GCD_TB.v,6|0): Net name 'ldA' uses uppercase characters.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'eq' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'lt' has an implicit declaration of type 'wire'.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,IMPNET (./GCD_TB.v,6|0): Net 'gt' has an implicit declaration of type 'wire'.
+reg [15:0] data_in;
+|
+halcheck: *W,STYVAL (./GCD_TB.v,2|0): Numeric value '15' used for identifier 'data_in'. Use constants to avoid portability issues.
+reg [15:0] A,B;
+|
+halcheck: *W,LCVARN (./GCD_TB.v,5|0): Register name 'A' uses uppercase characters.
+reg [15:0] A,B;
+|
+halcheck: *W,STYVAL (./GCD_TB.v,5|0): Numeric value '15' used for identifier 'A'. Use constants to avoid portability issues.
+reg [15:0] A,B;
+|
+halcheck: *W,LCVARN (./GCD_TB.v,5|0): Register name 'B' uses uppercase characters.
+begin
+|
+halcheck: *W,NOBLKN (./GCD_TB.v,9|0): Each block should be labeled with a meaningful name.
+clk=1'b0;
+|
+halcheck: *W,REVROP (./GCD_TB.v,10|0): Register 'clk' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./GCD_TB.v,14): Assigned using blocking assignment in this process.
+#1000 $finish;
+|
+halcheck: *W,BADSYS (./GCD_TB.v,12|0): System task $finish in module 'GCD_test' is ignored.
+always #5 clk=~clk;
+|
+halcheck: *W,EVTRIG (./GCD_TB.v,14|0): Always block with no event trigger at the start of the block in module 'GCD_test'.
+always #5 clk=~clk;
+|
+halcheck: *W,NBGEND (./GCD_TB.v,14|0): Missing begin/end statement in the 'always' block.
+always #5 clk=~clk;
+|
+halcheck: *W,SEPLIN (./GCD_TB.v,14|0): Use a separate line for each HDL statement.
+always #5 clk=~clk;
+|
+halcheck: *W,RDBFAS (./GCD_TB.v,14|0): Register 'clk', assigned using blocking assignment, is being read before getting assigned.
+begin
+|
+halcheck: *W,NOBLKN (./GCD_TB.v,16|0): Each block should be labeled with a meaningful name.
+#12 data_in=143;
+|
+halcheck: *W,IMPDTC (./GCD_TB.v,17|0): Expression '143' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit GCD_test.
+#12 data_in=143;
+|
+halcheck: *W,TRUNCZ (./GCD_TB.v,17|0): Truncation in constant conversion without a loss of bits in module/design-unit GCD_test.
+#12 data_in=143;
+|
+halcheck: *W,CONSBS (./GCD_TB.v,17|0): Base ('d, 'b, 'h, 'o) not specified for constant 143 in module/design-unit GCD_test.
+#10 data_in=78;
+|
+halcheck: *W,IMPDTC (./GCD_TB.v,18|0): Expression '78' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit GCD_test.
+#10 data_in=78;
+|
+halcheck: *W,TRUNCZ (./GCD_TB.v,18|0): Truncation in constant conversion without a loss of bits in module/design-unit GCD_test.
+#10 data_in=78;
+|
+halcheck: *W,CONSBS (./GCD_TB.v,18|0): Base ('d, 'b, 'h, 'o) not specified for constant 78 in module/design-unit GCD_test.
+begin
+|
+halcheck: *W,NOBLKN (./GCD_TB.v,21|0): Each block should be labeled with a meaningful name.
+$monitor ($time,"%d %b",DP.Aout,done);
+|
+halcheck: *W,BADSYS (./GCD_TB.v,22|0): System task $monitor in module 'GCD_test' is ignored.
+$dumpfile ("gcd.vcd");
+|
+halcheck: *W,BADSYS (./GCD_TB.v,23|0): System task $dumpfile in module 'GCD_test' is ignored.
+$dumpvars (0,GCD_test);
+|
+halcheck: *W,BADSYS (./GCD_TB.v,24|0): System task $dumpvars in module 'GCD_test' is ignored.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,LCVARN (./GCD_TB.v,6|0): Module instance name 'DP' uses uppercase characters.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *N,IDLENG (./GCD_TB.v,6|0): Identifier name 'DP' is not of appropriate length (4 to 16 characters).
+module GCD_datapath(gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,LCVARN (./GCD.v,1|0): Module name 'GCD_datapath' uses uppercase characters.
+module GCD_datapath(gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *W,DIFFMN (./GCD.v,1|0): Module name 'GCD_datapath' differs from file name 'GCD.v'.
+module GCD_datapath(gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halcheck: *N,PRTCNT (./GCD.v,1|0): Module/Entity 'GCD_datapath' contains '10' ports.
+halcheck: (./GCD.v,1): Number of Input ports: 7.
+halcheck: (./GCD.v,1): Number of Output ports: 3.
+PIPO A (Aout,Bus,ldA,clk);
+|
+halcheck: *W,CBYNAM (./GCD.v,6|0): Port connections for instance 'A' of module 'PIPO' should be made by name rather than by positional ordered list.
+PIPO B (Bout,Bus,ldB,clk);
+|
+halcheck: *W,CBYNAM (./GCD.v,7|0): Port connections for instance 'B' of module 'PIPO' should be made by name rather than by positional ordered list.
+MUX MUX_in1 (X,Aout,Bout,sel1);
+|
+halcheck: *W,CBYNAM (./GCD.v,8|0): Port connections for instance 'MUX_in1' of module 'MUX' should be made by name rather than by positional ordered list.
+MUX MUX_in2 (Y,Aout,Bout,sel2);
+|
+halcheck: *W,CBYNAM (./GCD.v,9|0): Port connections for instance 'MUX_in2' of module 'MUX' should be made by name rather than by positional ordered list.
+MUX MUX_load (Bus,Subout,data_in,sel_in);
+|
+halcheck: *W,CBYNAM (./GCD.v,10|0): Port connections for instance 'MUX_load' of module 'MUX' should be made by name rather than by positional ordered list.
+SUB SB (Subout,X,Y);
+|
+halcheck: *W,CBYNAM (./GCD.v,11|0): Port connections for instance 'SB' of module 'SUB' should be made by name rather than by positional ordered list.
+COMPARE COMP (lt,gt,eq,Aout,Bout);
+|
+halcheck: *W,CBYNAM (./GCD.v,12|0): Port connections for instance 'COMP' of module 'COMPARE' should be made by name rather than by positional ordered list.
+input ldA,ldB,sel1,sel2,sel_in,clk;
+|
+halcheck: *N,DECLIN (./GCD.v,2|0): Use a separate line for each HDL declaration.
+input [15:0] data_in;
+|
+halcheck: *W,STYVAL (./GCD.v,3|0): Numeric value '15' used for identifier 'data_in'. Use constants to avoid portability issues.
+output gt,lt,eq;
+|
+halcheck: *N,DECLIN (./GCD.v,4|0): Use a separate line for each HDL declaration.
+input ldA,ldB,sel1,sel2,sel_in,clk;
+|
+halcheck: *W,LCVARN (./GCD.v,2|0): Net name 'ldA' uses uppercase characters.
+input ldA,ldB,sel1,sel2,sel_in,clk;
+|
+halcheck: *W,LCVARN (./GCD.v,2|0): Net name 'ldB' uses uppercase characters.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,LCVARN (./GCD.v,5|0): Net name 'Aout' uses uppercase characters.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,STYVAL (./GCD.v,5|0): Numeric value '15' used for identifier 'Aout'. Use constants to avoid portability issues.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,LCVARN (./GCD.v,5|0): Net name 'Bout' uses uppercase characters.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,LCVARN (./GCD.v,5|0): Net name 'X' uses uppercase characters.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,LCVARN (./GCD.v,5|0): Net name 'Y' uses uppercase characters.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,LCVARN (./GCD.v,5|0): Net name 'Bus' uses uppercase characters.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,KEYWOD (./GCD.v,5|0): VHDL reserved word 'Bus' used as an identifier or label.
+wire [15:0] Aout,Bout,X,Y,Bus,Subout;
+|
+halcheck: *W,LCVARN (./GCD.v,5|0): Net name 'Subout' uses uppercase characters.
+PIPO A (Aout,Bus,ldA,clk);
+|
+halcheck: *W,LCVARN (./GCD.v,6|0): Module instance name 'A' uses uppercase characters.
+PIPO A (Aout,Bus,ldA,clk);
+|
+halcheck: *N,IDLENG (./GCD.v,6|0): Identifier name 'A' is not of appropriate length (4 to 16 characters).
+module PIPO (data_out,data_in,load,clk);
+|
+halcheck: *W,LCVARN (./GCD.v,15|0): Module name 'PIPO' uses uppercase characters.
+module PIPO (data_out,data_in,load,clk);
+|
+halcheck: *W,DIFFMN (./GCD.v,15|0): Module name 'PIPO' differs from file name 'GCD.v'.
+module PIPO (data_out,data_in,load,clk);
+|
+halcheck: *W,MULTMF (./GCD.v,15|0): More than one design-unit definition in file 'GCD.v'.
+module PIPO (data_out,data_in,load,clk);
+|
+halcheck: *N,PRTCNT (./GCD.v,15|0): Module/Entity 'PIPO' contains '4' ports.
+halcheck: (./GCD.v,15): Number of Input ports: 3.
+halcheck: (./GCD.v,15): Number of Output ports: 1.
+input [15:0] data_in;
+|
+halcheck: *W,STYVAL (./GCD.v,16|0): Numeric value '15' used for identifier 'data_in'. Use constants to avoid portability issues.
+input load,clk;
+|
+halcheck: *N,DECLIN (./GCD.v,17|0): Use a separate line for each HDL declaration.
+output reg [15:0] data_out;
+|
+halcheck: *W,STYVAL (./GCD.v,18|0): Numeric value '15' used for identifier 'data_out'. Use constants to avoid portability issues.
+always @(posedge clk)
+|
+halcheck: *W,NBGEND (./GCD.v,19|0): Missing begin/end statement in the 'always' block.
+if (load) data_out<=data_in;
+|
+halcheck: *W,NBGEND (./GCD.v,20|0): Missing begin/end statement in the 'if' block.
+if (load) data_out<=data_in;
+|
+halcheck: *W,SEPLIN (./GCD.v,20|0): Use a separate line for each HDL statement.
+PIPO B (Bout,Bus,ldB,clk);
+|
+halcheck: *W,LCVARN (./GCD.v,7|0): Module instance name 'B' uses uppercase characters.
+PIPO B (Bout,Bus,ldB,clk);
+|
+halcheck: *N,IDLENG (./GCD.v,7|0): Identifier name 'B' is not of appropriate length (4 to 16 characters).
+MUX MUX_in1 (X,Aout,Bout,sel1);
+|
+halcheck: *W,LCVARN (./GCD.v,8|0): Module instance name 'MUX_in1' uses uppercase characters.
+module MUX (out,in0,in1,sel);
+|
+halcheck: *N,IDLENG (./GCD.v,38|0): Identifier name 'MUX' is not of appropriate length (4 to 16 characters).
+module MUX (out,in0,in1,sel);
+|
+halcheck: *W,LCVARN (./GCD.v,38|0): Module name 'MUX' uses uppercase characters.
+module MUX (out,in0,in1,sel);
+|
+halcheck: *W,DIFFMN (./GCD.v,38|0): Module name 'MUX' differs from file name 'GCD.v'.
+module MUX (out,in0,in1,sel);
+|
+halcheck: *W,MULTMF (./GCD.v,38|0): More than one design-unit definition in file 'GCD.v'.
+module MUX (out,in0,in1,sel);
+|
+halcheck: *N,PRTCNT (./GCD.v,38|0): Module/Entity 'MUX' contains '4' ports.
+halcheck: (./GCD.v,38): Number of Input ports: 3.
+halcheck: (./GCD.v,38): Number of Output ports: 1.
+input [15:0] in0,in1;
+|
+halcheck: *W,NUMSUF (./GCD.v,39|0): Identifier 'in0' has a numeric value suffix.
+input [15:0] in0,in1;
+|
+halcheck: *W,STYVAL (./GCD.v,39|0): Numeric value '15' used for identifier 'in0'. Use constants to avoid portability issues.
+input [15:0] in0,in1;
+|
+halcheck: *W,NUMSUF (./GCD.v,39|0): Identifier 'in1' has a numeric value suffix.
+input [15:0] in0,in1;
+|
+halcheck: *N,DECLIN (./GCD.v,39|0): Use a separate line for each HDL declaration.
+output [15:0] out;
+|
+halcheck: *W,STYVAL (./GCD.v,41|0): Numeric value '15' used for identifier 'out'. Use constants to avoid portability issues.
+output [15:0] out;
+|
+halcheck: *W,KEYWOD (./GCD.v,41|0): VHDL reserved word 'out' used as an identifier or label.
+MUX MUX_in2 (Y,Aout,Bout,sel2);
+|
+halcheck: *W,LCVARN (./GCD.v,9|0): Module instance name 'MUX_in2' uses uppercase characters.
+MUX MUX_load (Bus,Subout,data_in,sel_in);
+|
+halcheck: *W,LCVARN (./GCD.v,10|0): Module instance name 'MUX_load' uses uppercase characters.
+SUB SB (Subout,X,Y);
+|
+halcheck: *W,LCVARN (./GCD.v,11|0): Module instance name 'SB' uses uppercase characters.
+SUB SB (Subout,X,Y);
+|
+halcheck: *N,IDLENG (./GCD.v,11|0): Identifier name 'SB' is not of appropriate length (4 to 16 characters).
+module SUB (out,in1,in2);
+|
+halcheck: *N,IDLENG (./GCD.v,23|0): Identifier name 'SUB' is not of appropriate length (4 to 16 characters).
+module SUB (out,in1,in2);
+|
+halcheck: *W,LCVARN (./GCD.v,23|0): Module name 'SUB' uses uppercase characters.
+module SUB (out,in1,in2);
+|
+halcheck: *W,DIFFMN (./GCD.v,23|0): Module name 'SUB' differs from file name 'GCD.v'.
+module SUB (out,in1,in2);
+|
+halcheck: *W,MULTMF (./GCD.v,23|0): More than one design-unit definition in file 'GCD.v'.
+module SUB (out,in1,in2);
+|
+halcheck: *N,PRTCNT (./GCD.v,23|0): Module/Entity 'SUB' contains '3' ports.
+halcheck: (./GCD.v,23): Number of Input ports: 2.
+halcheck: (./GCD.v,23): Number of Output ports: 1.
+input [15:0] in1,in2;
+|
+halcheck: *W,NUMSUF (./GCD.v,24|0): Identifier 'in1' has a numeric value suffix.
+input [15:0] in1,in2;
+|
+halcheck: *W,STYVAL (./GCD.v,24|0): Numeric value '15' used for identifier 'in1'. Use constants to avoid portability issues.
+input [15:0] in1,in2;
+|
+halcheck: *W,NUMSUF (./GCD.v,24|0): Identifier 'in2' has a numeric value suffix.
+input [15:0] in1,in2;
+|
+halcheck: *N,DECLIN (./GCD.v,24|0): Use a separate line for each HDL declaration.
+output reg [15:0] out;
+|
+halcheck: *W,STYVAL (./GCD.v,25|0): Numeric value '15' used for identifier 'out'. Use constants to avoid portability issues.
+output reg [15:0] out;
+|
+halcheck: *W,KEYWOD (./GCD.v,25|0): VHDL reserved word 'out' used as an identifier or label.
+always @(*)
+|
+halcheck: *W,NBGEND (./GCD.v,26|0): Missing begin/end statement in the 'always' block.
+out=in1-in2;
+|
+halcheck: *W,LRGOPR (./GCD.v,27|0): Arithmetic or relational operation performed on large operands in module/design-unit SB.
+COMPARE COMP (lt,gt,eq,Aout,Bout);
+|
+halcheck: *W,LCVARN (./GCD.v,12|0): Module instance name 'COMP' uses uppercase characters.
+module COMPARE (lt,gt,eq,data1,data2);
+|
+halcheck: *W,LCVARN (./GCD.v,30|0): Module name 'COMPARE' uses uppercase characters.
+module COMPARE (lt,gt,eq,data1,data2);
+|
+halcheck: *W,DIFFMN (./GCD.v,30|0): Module name 'COMPARE' differs from file name 'GCD.v'.
+module COMPARE (lt,gt,eq,data1,data2);
+|
+halcheck: *W,MULTMF (./GCD.v,30|0): More than one design-unit definition in file 'GCD.v'.
+module COMPARE (lt,gt,eq,data1,data2);
+|
+halcheck: *N,PRTCNT (./GCD.v,30|0): Module/Entity 'COMPARE' contains '5' ports.
+halcheck: (./GCD.v,30): Number of Input ports: 2.
+halcheck: (./GCD.v,30): Number of Output ports: 3.
+input [15:0] data1,data2;
+|
+halcheck: *W,NUMSUF (./GCD.v,31|0): Identifier 'data1' has a numeric value suffix.
+input [15:0] data1,data2;
+|
+halcheck: *W,STYVAL (./GCD.v,31|0): Numeric value '15' used for identifier 'data1'. Use constants to avoid portability issues.
+input [15:0] data1,data2;
+|
+halcheck: *W,NUMSUF (./GCD.v,31|0): Identifier 'data2' has a numeric value suffix.
+input [15:0] data1,data2;
+|
+halcheck: *N,DECLIN (./GCD.v,31|0): Use a separate line for each HDL declaration.
+output lt,gt,eq;
+|
+halcheck: *N,DECLIN (./GCD.v,32|0): Use a separate line for each HDL declaration.
+assign lt=data1<data2;
+|
+halcheck: *W,LRGOPR (./GCD.v,33|0): Arithmetic or relational operation performed on large operands in module/design-unit COMP.
+assign gt=data1>data2;
+|
+halcheck: *W,LRGOPR (./GCD.v,34|0): Arithmetic or relational operation performed on large operands in module/design-unit COMP.
+assign eq=data1==data2;
+|
+halcheck: *W,LRGOPR (./GCD.v,35|0): Arithmetic or relational operation performed on large operands in module/design-unit COMP.
+controller CON (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halcheck: *W,LCVARN (./GCD_TB.v,7|0): Module instance name 'CON' uses uppercase characters.
+controller CON (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halcheck: *N,IDLENG (./GCD_TB.v,7|0): Identifier name 'CON' is not of appropriate length (4 to 16 characters).
+module controller (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halcheck: *W,DIFFMN (./GCD.v,45|0): Module name 'controller' differs from file name 'GCD.v'.
+module controller (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halcheck: *W,MULTMF (./GCD.v,45|0): More than one design-unit definition in file 'GCD.v'.
+module controller (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halcheck: *N,PRTCNT (./GCD.v,45|0): Module/Entity 'controller' contains '11' ports.
+halcheck: (./GCD.v,45): Number of Input ports: 5.
+halcheck: (./GCD.v,45): Number of Output ports: 6.
+input clk,lt,gt,eq,start;
+|
+halcheck: *N,DECLIN (./GCD.v,46|0): Use a separate line for each HDL declaration.
+output reg ldA,ldB,sel1,sel2,sel_in,done;
+|
+halcheck: *N,DECLIN (./GCD.v,47|0): Use a separate line for each HDL declaration.
+output reg ldA,ldB,sel1,sel2,sel_in,done;
+|
+halcheck: *W,LCVARN (./GCD.v,47|0): Register name 'ldA' uses uppercase characters.
+output reg ldA,ldB,sel1,sel2,sel_in,done;
+|
+halcheck: *W,LCVARN (./GCD.v,47|0): Register name 'ldB' uses uppercase characters.
+reg [2:0] state;
+|
+halcheck: *W,STYVAL (./GCD.v,48|0): Numeric value '2' used for identifier 'state'. Use constants to avoid portability issues.
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *N,IDLENG (./GCD.v,49|0): Identifier name 's0' is not of appropriate length (4 to 16 characters).
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *W,UCCONN (./GCD.v,49|0): Lowercase characters used for identifier 's0'. Use uppercase characters for names of constants and user-defined types.
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *N,IDLENG (./GCD.v,49|0): Identifier name 's1' is not of appropriate length (4 to 16 characters).
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *W,UCCONN (./GCD.v,49|0): Lowercase characters used for identifier 's1'. Use uppercase characters for names of constants and user-defined types.
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *N,IDLENG (./GCD.v,49|0): Identifier name 's2' is not of appropriate length (4 to 16 characters).
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *W,UCCONN (./GCD.v,49|0): Lowercase characters used for identifier 's2'. Use uppercase characters for names of constants and user-defined types.
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *N,IDLENG (./GCD.v,49|0): Identifier name 's3' is not of appropriate length (4 to 16 characters).
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *W,UCCONN (./GCD.v,49|0): Lowercase characters used for identifier 's3'. Use uppercase characters for names of constants and user-defined types.
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *N,IDLENG (./GCD.v,49|0): Identifier name 's4' is not of appropriate length (4 to 16 characters).
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *W,UCCONN (./GCD.v,49|0): Lowercase characters used for identifier 's4'. Use uppercase characters for names of constants and user-defined types.
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *N,IDLENG (./GCD.v,49|0): Identifier name 's5' is not of appropriate length (4 to 16 characters).
+parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
+|
+halcheck: *W,UCCONN (./GCD.v,49|0): Lowercase characters used for identifier 's5'. Use uppercase characters for names of constants and user-defined types.
+begin
+|
+halcheck: *W,NOBLKN (./GCD.v,51|0): Each block should be labeled with a meaningful name.
+s0: if (start) state<=s1;
+|
+halcheck: *W,NBGEND (./GCD.v,53|0): Missing begin/end statement in the 'if' block.
+s0: if (start) state<=s1;
+|
+halcheck: *W,SEPLIN (./GCD.v,53|0): Use a separate line for each HDL statement.
+s2:#2 if(eq) state<=s5;
+|
+halcheck: *W,NBGEND (./GCD.v,55|0): Missing begin/end statement in the 'if' block.
+s2:#2 if(eq) state<=s5;
+|
+halcheck: *W,SEPLIN (./GCD.v,55|0): Use a separate line for each HDL statement.
+   else if (lt) state<=s3;
+|
+halcheck: *W,NBGEND (./GCD.v,56|0): Missing begin/end statement in the 'if' block.
+   else if (lt) state<=s3;
+|
+halcheck: *W,SEPLIN (./GCD.v,56|0): Use a separate line for each HDL statement.
+   else if (gt) state<=s4;
+|
+halcheck: *W,NBGEND (./GCD.v,57|0): Missing begin/end statement in the 'if' block.
+   else if (gt) state<=s4;
+|
+halcheck: *W,SEPLIN (./GCD.v,57|0): Use a separate line for each HDL statement.
+s3:#2 if (eq) state<=s5;
+|
+halcheck: *W,NBGEND (./GCD.v,58|0): Missing begin/end statement in the 'if' block.
+s3:#2 if (eq) state<=s5;
+|
+halcheck: *W,SEPLIN (./GCD.v,58|0): Use a separate line for each HDL statement.
+   else if (lt) state<=s3; 
+|
+halcheck: *W,NBGEND (./GCD.v,59|0): Missing begin/end statement in the 'if' block.
+   else if (lt) state<=s3; 
+|
+halcheck: *W,SEPLIN (./GCD.v,59|0): Use a separate line for each HDL statement.
+   else if (gt) state<=s4;
+|
+halcheck: *W,NBGEND (./GCD.v,60|0): Missing begin/end statement in the 'if' block.
+   else if (gt) state<=s4;
+|
+halcheck: *W,SEPLIN (./GCD.v,60|0): Use a separate line for each HDL statement.
+s4:#2 if (eq) state<=s5;
+|
+halcheck: *W,NBGEND (./GCD.v,61|0): Missing begin/end statement in the 'if' block.
+s4:#2 if (eq) state<=s5;
+|
+halcheck: *W,SEPLIN (./GCD.v,61|0): Use a separate line for each HDL statement.
+   else if (lt) state<=s3;
+|
+halcheck: *W,NBGEND (./GCD.v,62|0): Missing begin/end statement in the 'if' block.
+   else if (lt) state<=s3;
+|
+halcheck: *W,SEPLIN (./GCD.v,62|0): Use a separate line for each HDL statement.
+   else if (gt) state<=s4;
+|
+halcheck: *W,NBGEND (./GCD.v,63|0): Missing begin/end statement in the 'if' block.
+   else if (gt) state<=s4;
+|
+halcheck: *W,SEPLIN (./GCD.v,63|0): Use a separate line for each HDL statement.
+begin
+|
+halcheck: *W,NOBLKN (./GCD.v,70|0): Each block should be labeled with a meaningful name.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halcheck: *W,IMPDTC (./GCD.v,72|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halcheck: *W,INTTOB (./GCD.v,72|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halcheck: *W,TRUNCZ (./GCD.v,72|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halcheck: *W,SEPLIN (./GCD.v,72|0): Use a separate line for each HDL statement.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halcheck: *W,IMPDTC (./GCD.v,72|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halcheck: *W,IMPDTC (./GCD.v,73|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halcheck: *W,INTTOB (./GCD.v,73|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halcheck: *W,TRUNCZ (./GCD.v,73|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halcheck: *W,SEPLIN (./GCD.v,73|0): Use a separate line for each HDL statement.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halcheck: *W,IMPDTC (./GCD.v,73|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s2:if (eq) done=1;
+|
+halcheck: *W,NBGEND (./GCD.v,74|0): Missing begin/end statement in the 'if' block.
+s2:if (eq) done=1;
+|
+halcheck: *W,SEPLIN (./GCD.v,74|0): Use a separate line for each HDL statement.
+s2:if (eq) done=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,74|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s2:if (eq) done=1;
+|
+halcheck: *W,INTTOB (./GCD.v,74|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+s2:if (eq) done=1;
+|
+halcheck: *W,TRUNCZ (./GCD.v,74|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  sel1=1;sel2=0;sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,76|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  sel1=1;sel2=0;sel_in=0;
+|
+halcheck: *W,INTTOB (./GCD.v,76|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+  sel1=1;sel2=0;sel_in=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,76|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  sel1=1;sel2=0;sel_in=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,76|0): Use a separate line for each HDL statement.
+  sel1=1;sel2=0;sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,76|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,77|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,INTTOB (./GCD.v,77|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,TRUNCZ (./GCD.v,77|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,SEPLIN (./GCD.v,77|0): Use a separate line for each HDL statement.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,77|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+    sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,80|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+    sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,INTTOB (./GCD.v,80|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+    sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,80|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+    sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,80|0): Use a separate line for each HDL statement.
+    sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,80|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+    #1 ldA=1;ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,81|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+    #1 ldA=1;ldB=0;
+|
+halcheck: *W,INTTOB (./GCD.v,81|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+    #1 ldA=1;ldB=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,81|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+    #1 ldA=1;ldB=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,81|0): Use a separate line for each HDL statement.
+    #1 ldA=1;ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,81|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s3: if (eq) done=1;
+|
+halcheck: *W,NBGEND (./GCD.v,83|0): Missing begin/end statement in the 'if' block.
+s3: if (eq) done=1;
+|
+halcheck: *W,SEPLIN (./GCD.v,83|0): Use a separate line for each HDL statement.
+s3: if (eq) done=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,83|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s3: if (eq) done=1;
+|
+halcheck: *W,INTTOB (./GCD.v,83|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+s3: if (eq) done=1;
+|
+halcheck: *W,TRUNCZ (./GCD.v,83|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,85|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,INTTOB (./GCD.v,85|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+  sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,85|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,85|0): Use a separate line for each HDL statement.
+  sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,85|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,86|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,INTTOB (./GCD.v,86|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,TRUNCZ (./GCD.v,86|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,SEPLIN (./GCD.v,86|0): Use a separate line for each HDL statement.
+  #1 ldA=0; ldB=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,86|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,89|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+  sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,INTTOB (./GCD.v,89|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+  sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,89|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+  sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,89|0): Use a separate line for each HDL statement.
+  sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,89|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+ #1 ldA=1; ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,90|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+ #1 ldA=1; ldB=0;
+|
+halcheck: *W,INTTOB (./GCD.v,90|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+ #1 ldA=1; ldB=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,90|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+ #1 ldA=1; ldB=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,90|0): Use a separate line for each HDL statement.
+ #1 ldA=1; ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,90|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s4: if (eq) done=1;
+|
+halcheck: *W,NBGEND (./GCD.v,92|0): Missing begin/end statement in the 'if' block.
+s4: if (eq) done=1;
+|
+halcheck: *W,SEPLIN (./GCD.v,92|0): Use a separate line for each HDL statement.
+s4: if (eq) done=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,92|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+s4: if (eq) done=1;
+|
+halcheck: *W,INTTOB (./GCD.v,92|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+s4: if (eq) done=1;
+|
+halcheck: *W,TRUNCZ (./GCD.v,92|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,94|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,INTTOB (./GCD.v,94|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,94|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,94|0): Use a separate line for each HDL statement.
+sel1=1; sel2=0; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,94|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+#1 ldA=0; ldB=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,95|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+#1 ldA=0; ldB=1;
+|
+halcheck: *W,INTTOB (./GCD.v,95|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+#1 ldA=0; ldB=1;
+|
+halcheck: *W,TRUNCZ (./GCD.v,95|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+#1 ldA=0; ldB=1;
+|
+halcheck: *W,SEPLIN (./GCD.v,95|0): Use a separate line for each HDL statement.
+#1 ldA=0; ldB=1;
+|
+halcheck: *W,IMPDTC (./GCD.v,95|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,98|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,INTTOB (./GCD.v,98|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,98|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,98|0): Use a separate line for each HDL statement.
+sel1=0; sel2=1; sel_in=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,98|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+#1 ldA=1; ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,99|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+#1 ldA=1; ldB=0;
+|
+halcheck: *W,INTTOB (./GCD.v,99|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+#1 ldA=1; ldB=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,99|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+#1 ldA=1; ldB=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,99|0): Use a separate line for each HDL statement.
+#1 ldA=1; ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,99|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,102|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halcheck: *W,INTTOB (./GCD.v,102|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,102|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halcheck: *W,SEPLIN (./GCD.v,102|0): Use a separate line for each HDL statement.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,102|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+ldB=0;
+|
+halcheck: *W,IMPDTC (./GCD.v,103|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+ldB=0;
+|
+halcheck: *W,INTTOB (./GCD.v,103|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+ldB=0;
+|
+halcheck: *W,TRUNCZ (./GCD.v,103|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+default:begin ldA=0; ldB=0; end
+|
+halcheck: *W,IMPDTC (./GCD.v,105|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit CON.
+default:begin ldA=0; ldB=0; end
+|
+halcheck: *W,INTTOB (./GCD.v,105|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit CON.
+default:begin ldA=0; ldB=0; end
+|
+halcheck: *W,TRUNCZ (./GCD.v,105|0): Truncation in constant conversion without a loss of bits in module/design-unit CON.
+default:begin ldA=0; ldB=0; end
+|
+halcheck: *W,SEPLIN (./GCD.v,105|0): Use a separate line for each HDL statement.
+reg [15:0] A,B;
+|
+halcheck: *W,URAREG (./GCD_TB.v,5|0): Local register variable 'A' defined in module 'GCD_test' is unused (neither read nor assigned).
+reg [15:0] A,B;
+|
+halcheck: *W,URAREG (./GCD_TB.v,5|0): Local register variable 'B' defined in module 'GCD_test' is unused (neither read nor assigned).
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 233.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+always  @(state)
+|
+halsynth: *W,SENCMW (./GCD.v,69|0): Sensitivity list incomplete for node sel_in[0:0] in module controller. Missing signal(s): eq, lt, gt.
+case (state)
+|
+halsynth: (./GCD.v,71|0): Source HDL information for the error/warning mentioned above.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halsynth: (./GCD.v,72|0): Source HDL information for the error/warning mentioned above.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halsynth: (./GCD.v,73|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,75|0): Source HDL information for the error/warning mentioned above.
+  sel1=1;sel2=0;sel_in=0;
+|
+halsynth: (./GCD.v,76|0): Source HDL information for the error/warning mentioned above.
+  else if (gt) begin
+|
+halsynth: (./GCD.v,79|0): Source HDL information for the error/warning mentioned above.
+    sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,80|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,84|0): Source HDL information for the error/warning mentioned above.
+  sel1=1; sel2=0; sel_in=0;
+|
+halsynth: (./GCD.v,85|0): Source HDL information for the error/warning mentioned above.
+ else if (gt) begin
+|
+halsynth: (./GCD.v,88|0): Source HDL information for the error/warning mentioned above.
+  sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,89|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+else if (lt) begin
+|
+halsynth: (./GCD.v,93|0): Source HDL information for the error/warning mentioned above.
+sel1=1; sel2=0; sel_in=0;
+|
+halsynth: (./GCD.v,94|0): Source HDL information for the error/warning mentioned above.
+else if (gt) begin
+|
+halsynth: (./GCD.v,97|0): Source HDL information for the error/warning mentioned above.
+sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,98|0): Source HDL information for the error/warning mentioned above.
+always  @(state)
+|
+halsynth: *W,LATBAS (./GCD.v,69|0): In module/design-unit controller, latch is assigned by blocking assignments.
+always  @(state)
+|
+halsynth: *W,SENCMW (./GCD.v,69|0): Sensitivity list incomplete for node ldA[0:0] in module controller. Missing signal(s): eq, lt, gt.
+case (state)
+|
+halsynth: (./GCD.v,71|0): Source HDL information for the error/warning mentioned above.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halsynth: (./GCD.v,72|0): Source HDL information for the error/warning mentioned above.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halsynth: (./GCD.v,73|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,75|0): Source HDL information for the error/warning mentioned above.
+  #1 ldA=0; ldB=1;
+|
+halsynth: (./GCD.v,77|0): Source HDL information for the error/warning mentioned above.
+  else if (gt) begin
+|
+halsynth: (./GCD.v,79|0): Source HDL information for the error/warning mentioned above.
+    #1 ldA=1;ldB=0;
+|
+halsynth: (./GCD.v,81|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,84|0): Source HDL information for the error/warning mentioned above.
+  #1 ldA=0; ldB=1;
+|
+halsynth: (./GCD.v,86|0): Source HDL information for the error/warning mentioned above.
+ else if (gt) begin
+|
+halsynth: (./GCD.v,88|0): Source HDL information for the error/warning mentioned above.
+ #1 ldA=1; ldB=0;
+|
+halsynth: (./GCD.v,90|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+else if (lt) begin
+|
+halsynth: (./GCD.v,93|0): Source HDL information for the error/warning mentioned above.
+#1 ldA=0; ldB=1;
+|
+halsynth: (./GCD.v,95|0): Source HDL information for the error/warning mentioned above.
+else if (gt) begin
+|
+halsynth: (./GCD.v,97|0): Source HDL information for the error/warning mentioned above.
+#1 ldA=1; ldB=0;
+|
+halsynth: (./GCD.v,99|0): Source HDL information for the error/warning mentioned above.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halsynth: (./GCD.v,102|0): Source HDL information for the error/warning mentioned above.
+default:begin ldA=0; ldB=0; end
+|
+halsynth: (./GCD.v,105|0): Source HDL information for the error/warning mentioned above.
+always  @(state)
+|
+halsynth: *W,SENCMW (./GCD.v,69|0): Sensitivity list incomplete for node ldB[0:0] in module controller. Missing signal(s): eq, lt, gt.
+case (state)
+|
+halsynth: (./GCD.v,71|0): Source HDL information for the error/warning mentioned above.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halsynth: (./GCD.v,72|0): Source HDL information for the error/warning mentioned above.
+s1:begin sel_in=1;ldA=0;ldB=1;end
+|
+halsynth: (./GCD.v,73|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,75|0): Source HDL information for the error/warning mentioned above.
+  #1 ldA=0; ldB=1;
+|
+halsynth: (./GCD.v,77|0): Source HDL information for the error/warning mentioned above.
+  else if (gt) begin
+|
+halsynth: (./GCD.v,79|0): Source HDL information for the error/warning mentioned above.
+    #1 ldA=1;ldB=0;
+|
+halsynth: (./GCD.v,81|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,84|0): Source HDL information for the error/warning mentioned above.
+  #1 ldA=0; ldB=1;
+|
+halsynth: (./GCD.v,86|0): Source HDL information for the error/warning mentioned above.
+ else if (gt) begin
+|
+halsynth: (./GCD.v,88|0): Source HDL information for the error/warning mentioned above.
+ #1 ldA=1; ldB=0;
+|
+halsynth: (./GCD.v,90|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+else if (lt) begin
+|
+halsynth: (./GCD.v,93|0): Source HDL information for the error/warning mentioned above.
+#1 ldA=0; ldB=1;
+|
+halsynth: (./GCD.v,95|0): Source HDL information for the error/warning mentioned above.
+else if (gt) begin
+|
+halsynth: (./GCD.v,97|0): Source HDL information for the error/warning mentioned above.
+#1 ldA=1; ldB=0;
+|
+halsynth: (./GCD.v,99|0): Source HDL information for the error/warning mentioned above.
+ldB=0;
+|
+halsynth: (./GCD.v,103|0): Source HDL information for the error/warning mentioned above.
+default:begin ldA=0; ldB=0; end
+|
+halsynth: (./GCD.v,105|0): Source HDL information for the error/warning mentioned above.
+always  @(state)
+|
+halsynth: *W,SENCMW (./GCD.v,69|0): Sensitivity list incomplete for node done[0:0] in module controller. Missing signal(s): eq.
+case (state)
+|
+halsynth: (./GCD.v,71|0): Source HDL information for the error/warning mentioned above.
+s0:begin sel_in=1;ldA=1;ldB=0;done=0;end
+|
+halsynth: (./GCD.v,72|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halsynth: (./GCD.v,102|0): Source HDL information for the error/warning mentioned above.
+always  @(state)
+|
+halsynth: *W,SENCMW (./GCD.v,69|0): Sensitivity list incomplete for node sel1[0:0] in module controller. Missing signal(s): eq, lt, gt.
+case (state)
+|
+halsynth: (./GCD.v,71|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,75|0): Source HDL information for the error/warning mentioned above.
+  sel1=1;sel2=0;sel_in=0;
+|
+halsynth: (./GCD.v,76|0): Source HDL information for the error/warning mentioned above.
+  else if (gt) begin
+|
+halsynth: (./GCD.v,79|0): Source HDL information for the error/warning mentioned above.
+    sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,80|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,84|0): Source HDL information for the error/warning mentioned above.
+  sel1=1; sel2=0; sel_in=0;
+|
+halsynth: (./GCD.v,85|0): Source HDL information for the error/warning mentioned above.
+ else if (gt) begin
+|
+halsynth: (./GCD.v,88|0): Source HDL information for the error/warning mentioned above.
+  sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,89|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+else if (lt) begin
+|
+halsynth: (./GCD.v,93|0): Source HDL information for the error/warning mentioned above.
+sel1=1; sel2=0; sel_in=0;
+|
+halsynth: (./GCD.v,94|0): Source HDL information for the error/warning mentioned above.
+else if (gt) begin
+|
+halsynth: (./GCD.v,97|0): Source HDL information for the error/warning mentioned above.
+sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,98|0): Source HDL information for the error/warning mentioned above.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halsynth: (./GCD.v,102|0): Source HDL information for the error/warning mentioned above.
+always  @(state)
+|
+halsynth: *W,SENCMW (./GCD.v,69|0): Sensitivity list incomplete for node sel2[0:0] in module controller. Missing signal(s): eq, lt, gt.
+case (state)
+|
+halsynth: (./GCD.v,71|0): Source HDL information for the error/warning mentioned above.
+s2:if (eq) done=1;
+|
+halsynth: (./GCD.v,74|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,75|0): Source HDL information for the error/warning mentioned above.
+  sel1=1;sel2=0;sel_in=0;
+|
+halsynth: (./GCD.v,76|0): Source HDL information for the error/warning mentioned above.
+  else if (gt) begin
+|
+halsynth: (./GCD.v,79|0): Source HDL information for the error/warning mentioned above.
+    sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,80|0): Source HDL information for the error/warning mentioned above.
+s3: if (eq) done=1;
+|
+halsynth: (./GCD.v,83|0): Source HDL information for the error/warning mentioned above.
+   else if (lt) begin
+|
+halsynth: (./GCD.v,84|0): Source HDL information for the error/warning mentioned above.
+  sel1=1; sel2=0; sel_in=0;
+|
+halsynth: (./GCD.v,85|0): Source HDL information for the error/warning mentioned above.
+ else if (gt) begin
+|
+halsynth: (./GCD.v,88|0): Source HDL information for the error/warning mentioned above.
+  sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,89|0): Source HDL information for the error/warning mentioned above.
+s4: if (eq) done=1;
+|
+halsynth: (./GCD.v,92|0): Source HDL information for the error/warning mentioned above.
+else if (lt) begin
+|
+halsynth: (./GCD.v,93|0): Source HDL information for the error/warning mentioned above.
+sel1=1; sel2=0; sel_in=0;
+|
+halsynth: (./GCD.v,94|0): Source HDL information for the error/warning mentioned above.
+else if (gt) begin
+|
+halsynth: (./GCD.v,97|0): Source HDL information for the error/warning mentioned above.
+sel1=0; sel2=1; sel_in=0;
+|
+halsynth: (./GCD.v,98|0): Source HDL information for the error/warning mentioned above.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halsynth: (./GCD.v,102|0): Source HDL information for the error/warning mentioned above.
+s2:#2 if(eq) state<=s5;
+|
+halsynth: *W,IGNDLY (./GCD.v,55|0): Lumped delay in module 'controller' is ignored.
+s3:#2 if (eq) state<=s5;
+|
+halsynth: *W,IGNDLY (./GCD.v,58|0): Lumped delay in module 'controller' is ignored.
+s4:#2 if (eq) state<=s5;
+|
+halsynth: *W,IGNDLY (./GCD.v,61|0): Lumped delay in module 'controller' is ignored.
+  #1 ldA=0; ldB=1;
+|
+halsynth: *W,IGNDLY (./GCD.v,77|0): Lumped delay in module 'controller' is ignored.
+    #1 ldA=1;ldB=0;
+|
+halsynth: *W,IGNDLY (./GCD.v,81|0): Lumped delay in module 'controller' is ignored.
+  #1 ldA=0; ldB=1;
+|
+halsynth: *W,IGNDLY (./GCD.v,86|0): Lumped delay in module 'controller' is ignored.
+ #1 ldA=1; ldB=0;
+|
+halsynth: *W,IGNDLY (./GCD.v,90|0): Lumped delay in module 'controller' is ignored.
+#1 ldA=0; ldB=1;
+|
+halsynth: *W,IGNDLY (./GCD.v,95|0): Lumped delay in module 'controller' is ignored.
+#1 ldA=1; ldB=0;
+|
+halsynth: *W,IGNDLY (./GCD.v,99|0): Lumped delay in module 'controller' is ignored.
+case (state)
+|
+halsynth: *N,FSMIDN (./GCD.v,52|0): In module/design-unit 'controller', FSM for state register 'state' has been recognized.
+always @(posedge clk)
+|
+halsynth: *W,BADFSM (./GCD.v,50|0): In module/design-unit 'controller', FSM for state register 'state' does not adhere to modeling style guidelines.
+s1:state<=s2;
+|
+halsynth: *W,TRNMBT (./GCD.v,54|0): For the specified state '1', the state value changes by more than one bits on transition to state(s): 2.
+s1:state<=s2;
+|
+halsynth: (./GCD.v,54|0): Source HDL information for the error/warning mentioned above.
+s2:#2 if(eq) state<=s5;
+|
+halsynth: *W,TRNMBT (./GCD.v,55|0): For the specified state '2', the state value changes by more than one bits on transition to state(s): 5, 4.
+s2:#2 if(eq) state<=s5;
+|
+halsynth: (./GCD.v,55|0): Source HDL information for the error/warning mentioned above.
+   else if (gt) state<=s4;
+|
+halsynth: (./GCD.v,57|0): Source HDL information for the error/warning mentioned above.
+s3:#2 if (eq) state<=s5;
+|
+halsynth: *W,TRNMBT (./GCD.v,58|0): For the specified state '3', the state value changes by more than one bits on transition to state(s): 5, 4.
+s3:#2 if (eq) state<=s5;
+|
+halsynth: (./GCD.v,58|0): Source HDL information for the error/warning mentioned above.
+   else if (gt) state<=s4;
+|
+halsynth: (./GCD.v,60|0): Source HDL information for the error/warning mentioned above.
+s4:#2 if (eq) state<=s5;
+|
+halsynth: *W,TRNMBT (./GCD.v,61|0): For the specified state '4', the state value changes by more than one bits on transition to state(s): 3.
+   else if (lt) state<=s3;
+|
+halsynth: (./GCD.v,62|0): Source HDL information for the error/warning mentioned above.
+case (state)
+|
+halsynth: *E,TERMST (./GCD.v,52|0): In module/design-unit 'controller', FSM for state register 'state' has terminal states 5.
+s5: state<=s5;
+|
+halsynth: (./GCD.v,64|0): Source HDL information for the error/warning mentioned above.
+case (state)
+|
+halsynth: *E,UNRCHS (./GCD.v,52|0): In module/design-unit 'controller', FSM for state register 'state' has unreachable states 0.
+s0: if (start) state<=s1;
+|
+halsynth: (./GCD.v,53|0): Source HDL information for the error/warning mentioned above.
+module controller (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halsynth: *W,EXTFSM (./GCD.v,45|0): Extraneous logic present in module/design-unit 'controller' that encodes an FSM.
+initial
+|
+halsynth: *W,INIUSP (./GCD_TB.v,8|0): Module GCD_test has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+always #5 clk=~clk;
+|
+halsynth: *E,AWNDEL (./GCD_TB.v,14|0): Always block with no event trigger at the start in module GCD_test.
+initial
+|
+halsynth: *W,INIUSP (./GCD_TB.v,15|0): Module GCD_test has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+initial
+|
+halsynth: *W,INIUSP (./GCD_TB.v,20|0): Module GCD_test has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: *W,COMBLP: In module GCD_test, combinational loop detected for node clk.
+always #5 clk=~clk;
+|
+halsynth: (./GCD_TB.v,14|0): Source HDL information for the error/warning mentioned above.
+always #5 clk=~clk;
+|
+halsynth: *W,IGNDLY (./GCD_TB.v,14|0): Lumped delay in module 'GCD_test' is ignored.
+halsynth: Total errors   = 3.
+halsynth: Total warnings = 27.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+reg clk,start;
+|
+halstruct: *E,CMBPAU (./GCD_TB.v,3|0): Combinational loop detected through 'clk' in module/design-unit 'GCD_test'.
+halstruct: (./GCD_TB.v,14): GCD_test.clk.
+GCD_datapath DP (gt,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+|
+halstruct: *E,UNCONI (./GCD_TB.v,6|0): Input port 'data_in' of entity/module 'GCD_datapath' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'GCD_test.DP'.
+halstruct: (./GCD_TB.v,6): 'data_in[15:0]' mapped to actual expression 'data_in' which is undriven.
+module controller (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halstruct: *W,SYNASN (./GCD.v,45|0): The module/design-unit 'controller' contains synchronous as well as asynchronous logic.
+halstruct: (./GCD.v,94): One instance/occurence of asynchronous logic at 'GCD_test.CON.sel_in'.
+halstruct: (./GCD.v,65): One instance/occurence of synchronous logic at 'GCD_test.CON.state'.
+controller CON (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halstruct: *W,UNCONO (./GCD_TB.v,7|0): Port 'done' (which is being used as an output) of entity/module 'controller' is being driven inside the design, but not connected (either partially or completely) in its instance 'GCD_test.CON'.
+controller CON (ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+|
+halstruct: *E,UNCONI (./GCD_TB.v,7|0): Input port 'start' of entity/module 'controller' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'GCD_test.CON'.
+halstruct: (./GCD_TB.v,7): 'start' mapped to actual expression 'start' which is undriven.
+COMPARE COMP (lt,gt,eq,Aout,Bout);
+|
+halstruct: *W,SYNPRT (./GCD.v,12|0): Output port 'gt' is assigned asynchronously.
+COMPARE COMP (lt,gt,eq,Aout,Bout);
+|
+halstruct: *W,SYNPRT (./GCD.v,12|0): Output port 'lt' is assigned asynchronously.
+COMPARE COMP (lt,gt,eq,Aout,Bout);
+|
+halstruct: *W,SYNPRT (./GCD.v,12|0): Output port 'eq' is assigned asynchronously.
+if (load) data_out<=data_in;
+|
+halstruct: *W,FFWNSR (./GCD.v,20|0): Flip-flop 'data_out' does not have any set or reset.
+reg clk,start;
+|
+halstruct: *N,CLKINF (./GCD_TB.v,3|0): Signal 'GCD_test.clk' was inferred as clock.
+halstruct: (./GCD_TB.v,3): Clock source is signal 'GCD_test.clk'.
+halstruct: (./GCD.v,20): Drives the flip-flop 'GCD_test.DP.A.data_out'.
+if (load) data_out<=data_in;
+|
+halstruct: *E,CBPAHI (./GCD.v,20|0): Combinatorial path crossing multiple units drives 'GCD_test.DP.A.data_out'.
+halstruct: (./GCD.v,20): in instance 'GCD_test.DP.A', combinatorial function of input 'load' drives 'data_out'.
+halstruct: (./GCD.v,6): in instance 'GCD_test.DP', input 'ldA' drives input 'load' of instance 'A'.
+halstruct: (./GCD_TB.v,6): in instance 'GCD_test', 'ldA' drives input 'ldA' of instance 'DP'.
+halstruct: (./GCD_TB.v,7): in instance 'GCD_test', output 'ldA' of instance 'CON' drives 'ldA'.
+halstruct: (./GCD.v,105): in instance 'GCD_test.CON', combinatorial function of input 'eq' drives 'ldA'.
+halstruct: (./GCD_TB.v,7): in instance 'GCD_test', 'eq' drives input 'eq' of instance 'CON'.
+halstruct: (./GCD_TB.v,6): in instance 'GCD_test', output 'eq' of instance 'DP' drives 'eq'.
+halstruct: (./GCD.v,12): in instance 'GCD_test.DP', output 'eq' of instance 'COMP' drives 'eq'.
+halstruct: (./GCD.v,35): in instance 'GCD_test.DP.COMP', combinatorial function drives 'eq'.
+if (load) data_out<=data_in;
+|
+halstruct: *W,CLKNPI (./GCD.v,20|0): Flip-flop 'GCD_test.DP.A.data_out' has clock 'clk' which is not derived from primary input.
+halstruct: (./GCD_TB.v,14): Derived from local variable 'clk'.
+if (load) data_out<=data_in;
+|
+halstruct: *W,NEGCLK (./GCD.v,20|0): Clock signal 'GCD_test.clk' of flip-flop 'GCD_test.DP.A.data_out' is derived from an inverter.
+if (load) data_out<=data_in;
+|
+halstruct: *E,CBPAHI (./GCD.v,20|0): Combinatorial path crossing multiple units drives 'GCD_test.DP.B.data_out'.
+halstruct: (./GCD.v,20): in instance 'GCD_test.DP.B', combinatorial function of input 'load' drives 'data_out'.
+halstruct: (./GCD.v,7): in instance 'GCD_test.DP', input 'ldB' drives input 'load' of instance 'B'.
+halstruct: (./GCD_TB.v,6): in instance 'GCD_test', 'ldB' drives input 'ldB' of instance 'DP'.
+halstruct: (./GCD_TB.v,7): in instance 'GCD_test', output 'ldB' of instance 'CON' drives 'ldB'.
+halstruct: (./GCD.v,105): in instance 'GCD_test.CON', combinatorial function of input 'eq' drives 'ldB'.
+halstruct: (./GCD_TB.v,7): in instance 'GCD_test', 'eq' drives input 'eq' of instance 'CON'.
+halstruct: (./GCD_TB.v,6): in instance 'GCD_test', output 'eq' of instance 'DP' drives 'eq'.
+halstruct: (./GCD.v,12): in instance 'GCD_test.DP', output 'eq' of instance 'COMP' drives 'eq'.
+halstruct: (./GCD.v,35): in instance 'GCD_test.DP.COMP', combinatorial function drives 'eq'.
+if (load) data_out<=data_in;
+|
+halstruct: *W,NEGCLK (./GCD.v,20|0): Clock signal 'GCD_test.clk' of flip-flop 'GCD_test.DP.B.data_out' is derived from an inverter.
+assign out=sel ? in1:in0;
+|
+halstruct: *W,SYNPRT (./GCD.v,42|0): Output port 'out' is assigned asynchronously.
+out=in1-in2;
+|
+halstruct: *W,SYNPRT (./GCD.v,27|0): Output port 'out' is assigned asynchronously.
+assign lt=data1<data2;
+|
+halstruct: *W,SYNPRT (./GCD.v,33|0): Output port 'lt' is assigned asynchronously.
+assign gt=data1>data2;
+|
+halstruct: *W,SYNPRT (./GCD.v,34|0): Output port 'gt' is assigned asynchronously.
+assign eq=data1==data2;
+|
+halstruct: *W,SYNPRT (./GCD.v,35|0): Output port 'eq' is assigned asynchronously.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *W,SYNPRT (./GCD.v,105|0): Output port 'ldA' is assigned asynchronously.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *W,SYNPRT (./GCD.v,105|0): Output port 'ldB' is assigned asynchronously.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,SYNPRT (./GCD.v,102|0): Output port 'sel1' is assigned asynchronously.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,SYNPRT (./GCD.v,102|0): Output port 'sel2' is assigned asynchronously.
+sel1=1; sel2=0; sel_in=0;
+|
+halstruct: *W,SYNPRT (./GCD.v,94|0): Output port 'sel_in' is assigned asynchronously.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,SYNPRT (./GCD.v,102|0): Output port 'done' is assigned asynchronously.
+default:state<=s0;
+|
+halstruct: *W,FFWNSR (./GCD.v,65|0): Flip-flop 'state' does not have any set or reset.
+default:state<=s0;
+|
+halstruct: *E,CBPAHI (./GCD.v,65|0): Combinatorial path crossing multiple units drives 'GCD_test.CON.state'.
+halstruct: (./GCD.v,65): in instance 'GCD_test.CON', combinatorial function of input 'eq' drives 'state'.
+halstruct: (./GCD_TB.v,7): in instance 'GCD_test', 'eq' drives input 'eq' of instance 'CON'.
+halstruct: (./GCD_TB.v,6): in instance 'GCD_test', output 'eq' of instance 'DP' drives 'eq'.
+halstruct: (./GCD.v,12): in instance 'GCD_test.DP', output 'eq' of instance 'COMP' drives 'eq'.
+halstruct: (./GCD.v,35): in instance 'GCD_test.DP.COMP', combinatorial function drives 'eq'.
+default:state<=s0;
+|
+halstruct: *W,NEGCLK (./GCD.v,65|0): Clock signal 'GCD_test.clk' of flip-flop 'GCD_test.CON.state' is derived from an inverter.
+sel1=0; sel2=1; sel_in=0;
+|
+halstruct: *N,CLKINF (./GCD.v,98|0): Signal 'GCD_test.CON.mux(state)' was inferred as clock.
+halstruct: (./GCD.v,98): Clock source is signal 'GCD_test.CON.mux(state)'.
+halstruct: (./GCD.v,94): Drives the latch 'GCD_test.CON.sel_in'.
+sel1=1; sel2=0; sel_in=0;
+|
+halstruct: *W,LENCPI (./GCD.v,94|0): Enable of latch 'GCD_test.CON.sel_in' is not controllable from primary inputs.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *N,CLKINF (./GCD.v,105|0): Signal 'GCD_test.CON.mux(state)' was inferred as clock.
+halstruct: (./GCD.v,105): Clock source is signal 'GCD_test.CON.mux(state)'.
+halstruct: (./GCD.v,105): Drives the latch 'GCD_test.CON.ldA'.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *W,LENCPI (./GCD.v,105|0): Enable of latch 'GCD_test.CON.ldA' is not controllable from primary inputs.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *W,LENCPI (./GCD.v,105|0): Enable of latch 'GCD_test.CON.ldB' is not controllable from primary inputs.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *N,CLKINF (./GCD.v,102|0): Signal 'GCD_test.CON.mux(state)' was inferred as clock.
+halstruct: (./GCD.v,102): Clock source is signal 'GCD_test.CON.mux(state)'.
+halstruct: (./GCD.v,102): Drives the latch 'GCD_test.CON.done'.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,LENCPI (./GCD.v,102|0): Enable of latch 'GCD_test.CON.done' is not controllable from primary inputs.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *N,CLKINF (./GCD.v,102|0): Signal 'GCD_test.CON.mux((~((state == 0)) & ~((state == 1))))' was inferred as clock.
+halstruct: (./GCD.v,102): Clock source is signal 'GCD_test.CON.mux((~((state == 0)) & ~((state == 1))))'.
+halstruct: (./GCD.v,102): Drives the latch 'GCD_test.CON.sel1'.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,LENCPI (./GCD.v,102|0): Enable of latch 'GCD_test.CON.sel1' is not controllable from primary inputs.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,LENCPI (./GCD.v,102|0): Enable of latch 'GCD_test.CON.sel2' is not controllable from primary inputs.
+module GCD_test;
+|
+halstruct: *W,ATLGLC (./GCD_TB.v,1|0): Glue logic inferred in top-level module/design-unit 'GCD_test'.
+halstruct: (./GCD_TB.v,14): HDL-statement inferred as glue logic.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,LATINF (./GCD.v,102|0): Process/always block models a latch, or signal 'sel2' is not assigned a value in all branches.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,LATINF (./GCD.v,102|0): Process/always block models a latch, or signal 'sel1' is not assigned a value in all branches.
+done=1; sel1=0; sel2=0; ldA=0;
+|
+halstruct: *W,LATINF (./GCD.v,102|0): Process/always block models a latch, or signal 'done' is not assigned a value in all branches.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *W,LATINF (./GCD.v,105|0): Process/always block models a latch, or signal 'ldB' is not assigned a value in all branches.
+default:begin ldA=0; ldB=0; end
+|
+halstruct: *W,LATINF (./GCD.v,105|0): Process/always block models a latch, or signal 'ldA' is not assigned a value in all branches.
+sel1=1; sel2=0; sel_in=0;
+|
+halstruct: *W,LATINF (./GCD.v,94|0): Process/always block models a latch, or signal 'sel_in' is not assigned a value in all branches.
+module GCD_test;
+|
+halstruct: *N,NUMDFF (./GCD_TB.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 35.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 6.
+halstruct: Total warnings = 35.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (9)
+  AWNDEL (1)      CBPAHI (3)      CMBPAU (1)      TERMST (1)     
+  UNCONI (2)      UNRCHS (1)     
+
+ Warnings : (295)
+  ATLGLC (1)      BADFSM (1)      BADSYS (4)      CBYNAM (9)     
+  CLKNPI (1)      COMBLP (1)      CONSBS (2)      DIFFMN (7)     
+  EVTRIG (1)      EXTFSM (1)      FFWNSR (2)      IGNDLY (10)    
+  IMPDTC (37)     IMPNET (8)      INIUSP (3)      INTTOB (20)    
+  KEYWOD (3)      LATBAS (1)      LATINF (6)      LCVARN (29)    
+  LENCPI (6)      LRGOPR (4)      MULTMF (5)      NBGEND (17)    
+  NEEDIO (1)      NEGCLK (3)      NOBLKN (5)      NUMSUF (6)     
+  RDBFAS (1)      REVROP (1)      SENCMW (6)      SEPLIN (31)    
+  STYVAL (12)     SYNASN (1)      SYNPRT (14)     TRNMBT (4)     
+  TRUNCZ (22)     UCCONN (6)      UNCONO (1)      URAREG (2)     
+
+ Notes    : (35)
+  CLKINF (5)      DECLIN (9)      FSMIDN (1)      IDLENG (13)    
+  NUMDFF (1)      PRTCNT (6)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld25/Ass_GCD/INCA_libs/cds.lib -sortby severity -sortby category -sortby tag hal.log
+
