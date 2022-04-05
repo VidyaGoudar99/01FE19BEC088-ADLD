@@ -1,0 +1,3 @@
+s1(04Apr2022:15:55:10):  irun -access +rwc tic_tb.v tic.v 
+s2(04Apr2022:16:12:51):  irun -access +rwc tic_tb.v tic.v 
+s3(04Apr2022:16:34:42):  irun -access +rwc tic.v tic_tb.v 

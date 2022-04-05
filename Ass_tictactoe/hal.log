@@ -1,0 +1,1497 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld25/01fe19bec096/Ass_tictactoe/cds.lib -logfile hal.log worklib.tic_tb:v.
+hal: Snapshot:  worklib.tic_tb:v.
+hal: Workspace: /home/adld25/01fe19bec096/Ass_tictactoe.
+hal: Date: Mon Apr 04 16:29:11 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module tic_tb;
+|
+halcheck: *W,NEEDIO (./tic_tb.v,1|0): Top-level module 'tic_tb' has no inputs/outputs/inouts.
+wire [1:0] pos_led1;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,8|0): Identifier 'pos_led1' has a numeric value suffix.
+wire [1:0] pos_led1;
+|
+halcheck: *W,STYVAL (./tic_tb.v,8|0): Numeric value '1' used for identifier 'pos_led1'. Use constants to avoid portability issues.
+wire [1:0] pos_led2;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,9|0): Identifier 'pos_led2' has a numeric value suffix.
+wire [1:0] pos_led2;
+|
+halcheck: *W,STYVAL (./tic_tb.v,9|0): Numeric value '1' used for identifier 'pos_led2'. Use constants to avoid portability issues.
+wire [1:0] pos_led3;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,10|0): Identifier 'pos_led3' has a numeric value suffix.
+wire [1:0] pos_led3;
+|
+halcheck: *W,STYVAL (./tic_tb.v,10|0): Numeric value '1' used for identifier 'pos_led3'. Use constants to avoid portability issues.
+wire [1:0] pos_led4;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,11|0): Identifier 'pos_led4' has a numeric value suffix.
+wire [1:0] pos_led4;
+|
+halcheck: *W,STYVAL (./tic_tb.v,11|0): Numeric value '1' used for identifier 'pos_led4'. Use constants to avoid portability issues.
+wire [1:0] pos_led5;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,12|0): Identifier 'pos_led5' has a numeric value suffix.
+wire [1:0] pos_led5;
+|
+halcheck: *W,STYVAL (./tic_tb.v,12|0): Numeric value '1' used for identifier 'pos_led5'. Use constants to avoid portability issues.
+wire [1:0] pos_led6;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,13|0): Identifier 'pos_led6' has a numeric value suffix.
+wire [1:0] pos_led6;
+|
+halcheck: *W,STYVAL (./tic_tb.v,13|0): Numeric value '1' used for identifier 'pos_led6'. Use constants to avoid portability issues.
+wire [1:0] pos_led7;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,14|0): Identifier 'pos_led7' has a numeric value suffix.
+wire [1:0] pos_led7;
+|
+halcheck: *W,STYVAL (./tic_tb.v,14|0): Numeric value '1' used for identifier 'pos_led7'. Use constants to avoid portability issues.
+wire [1:0] pos_led8;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,15|0): Identifier 'pos_led8' has a numeric value suffix.
+wire [1:0] pos_led8;
+|
+halcheck: *W,STYVAL (./tic_tb.v,15|0): Numeric value '1' used for identifier 'pos_led8'. Use constants to avoid portability issues.
+wire [1:0] pos_led9;
+|
+halcheck: *W,NUMSUF (./tic_tb.v,16|0): Identifier 'pos_led9' has a numeric value suffix.
+wire [1:0] pos_led9;
+|
+halcheck: *W,STYVAL (./tic_tb.v,16|0): Numeric value '1' used for identifier 'pos_led9'. Use constants to avoid portability issues.
+wire [1:0] who;
+|
+halcheck: *W,STYVAL (./tic_tb.v,17|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+reg [3:0] computer_position;
+|
+halcheck: *W,STYVAL (./tic_tb.v,6|0): Numeric value '3' used for identifier 'computer_position'. Use constants to avoid portability issues.
+reg [3:0] player_position;
+|
+halcheck: *W,STYVAL (./tic_tb.v,7|0): Numeric value '3' used for identifier 'player_position'. Use constants to avoid portability issues.
+initial begin
+|
+halcheck: *W,NOBLKN (./tic_tb.v,36|0): Each block should be labeled with a meaningful name.
+clock = 0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,37|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+clock = 0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,37|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+clock = 0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,37|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+forever #5 clock = ~clock;
+|
+halcheck: *W,SEPLIN (./tic_tb.v,38|0): Use a separate line for each HDL statement.
+initial begin
+|
+halcheck: *W,NOBLKN (./tic_tb.v,40|0): Each block should be labeled with a meaningful name.
+play=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,41|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,41|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,41|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+reset=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,42|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+reset=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,42|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+reset=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,42|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,43|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+computer_position=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,43|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+player_position=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,44|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+player_position=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,44|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,45|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,45|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,45|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+#100;
+|
+halcheck: *W,EMPSTM (./tic_tb.v,46|0): Module 'tic_tb' contains an empty statement.
+play=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,47|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,47|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,47|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,48|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,48|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,48|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=4;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,49|0): Expression '4' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+computer_position=4;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,49|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=4;
+|
+halcheck: *W,CONSBS (./tic_tb.v,49|0): Base ('d, 'b, 'h, 'o) not specified for constant 4 in module/design-unit tic_tb.
+player_position=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,50|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+player_position=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,50|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+#50;
+|
+halcheck: *W,EMPSTM (./tic_tb.v,51|0): Module 'tic_tb' contains an empty statement.
+pc=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,52|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,52|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,52|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,53|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,53|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,53|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+#100;
+|
+halcheck: *W,EMPSTM (./tic_tb.v,54|0): Module 'tic_tb' contains an empty statement.
+reset=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,55|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+reset=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,55|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+reset=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,55|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,56|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,56|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,56|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,57|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,57|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,57|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=8;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,58|0): Expression '8' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+computer_position=8;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,58|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=8;
+|
+halcheck: *W,CONSBS (./tic_tb.v,58|0): Base ('d, 'b, 'h, 'o) not specified for constant 8 in module/design-unit tic_tb.
+player_position=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,59|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+player_position=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,59|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+#50;
+|
+halcheck: *W,EMPSTM (./tic_tb.v,60|0): Module 'tic_tb' contains an empty statement.
+pc=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,61|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,61|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,61|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,62|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,62|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,62|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+#100;
+|
+halcheck: *W,EMPSTM (./tic_tb.v,63|0): Module 'tic_tb' contains an empty statement.
+reset=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,64|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+reset=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,64|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+reset=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,64|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,65|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,65|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,65|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,66|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,66|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,66|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=6;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,67|0): Expression '6' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+computer_position=6;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,67|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+computer_position=6;
+|
+halcheck: *W,CONSBS (./tic_tb.v,67|0): Base ('d, 'b, 'h, 'o) not specified for constant 6 in module/design-unit tic_tb.
+player_position=2;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,68|0): Expression '2' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+player_position=2;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,68|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+player_position=2;
+|
+halcheck: *W,CONSBS (./tic_tb.v,68|0): Base ('d, 'b, 'h, 'o) not specified for constant 2 in module/design-unit tic_tb.
+#50;
+|
+halcheck: *W,EMPSTM (./tic_tb.v,69|0): Module 'tic_tb' contains an empty statement.
+pc=1;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,70|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=1;
+|
+halcheck: *W,INTTOB (./tic_tb.v,70|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=1;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,70|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,71|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,71|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,71|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,73|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,73|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+pc=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,73|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,IMPDTC (./tic_tb.v,74|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,INTTOB (./tic_tb.v,74|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tic_tb.
+play=0;
+|
+halcheck: *W,TRUNCZ (./tic_tb.v,74|0): Truncation in constant conversion without a loss of bits in module/design-unit tic_tb.
+tic uut(
+|
+halcheck: *N,IDLENG (./tic_tb.v,18|0): Identifier name 'uut' is not of appropriate length (4 to 16 characters).
+module tic(
+|
+halcheck: *N,IDLENG (./tic.v,1|0): Identifier name 'tic' is not of appropriate length (4 to 16 characters).
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halcheck: *W,MAXLEN (./tic.v,24|0): The HDL source line is 86 characters, which exceeds the recommended length of 80 characters.
+assign no_space =  ((((((((temp1 & temp2) & temp3) & temp4) & temp5) & temp6) & temp7) & temp8) & temp9);
+|
+halcheck: *W,MAXLEN (./tic.v,281|0): The HDL source line is 105 characters, which exceeds the recommended length of 80 characters.
+assign temp21 = ((((((((temp1 | temp2) | temp3) | temp4) | temp5) | temp6) | temp7) | temp8) | temp9);
+|
+halcheck: *W,MAXLEN (./tic.v,312|0): The HDL source line is 102 characters, which exceeds the recommended length of 80 characters.
+assign temp22 = ((((((((temp11 | temp12) | temp13) | temp14) | temp15) | temp16) | temp17) | temp18) | temp19);
+|
+halcheck: *W,MAXLEN (./tic.v,313|0): The HDL source line is 111 characters, which exceeds the recommended length of 80 characters.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,MAXLEN (./tic.v,344|0): The HDL source line is 122 characters, which exceeds the recommended length of 80 characters.
+assign who = ((((((( who1 | who2) | who3) | who4) | who5) | who6) | who7) | who8);
+|
+halcheck: *W,MAXLEN (./tic.v,356|0): The HDL source line is 82 characters, which exceeds the recommended length of 80 characters.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,MAXLEN (./tic.v,359|0): The HDL source line is 94 characters, which exceeds the recommended length of 80 characters.
+module tic(
+|
+halcheck: *N,PRTCNT (./tic.v,1|0): Module/Entity 'tic' contains '16' ports.
+halcheck: (./tic.v,1): Number of Input ports: 6.
+halcheck: (./tic.v,1): Number of Output ports: 10.
+position_registers position_reg_unit(
+|
+halcheck: *W,CBYNAM (./tic.v,17|0): Port connections for instance 'position_reg_unit' of module 'position_registers' should be made by name rather than by positional ordered list.
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halcheck: *W,CBYNAM (./tic.v,24|0): Port connections for instance 'win_detect_unit' of module 'winner_detector' should be made by name rather than by positional ordered list.
+position_decoder pd1(computer_position,computer_play,PC_en);
+|
+halcheck: *W,CBYNAM (./tic.v,25|0): Port connections for instance 'pd1' of module 'position_decoder' should be made by name rather than by positional ordered list.
+position_decoder pd2(player_position,player_play,PL_en);
+|
+halcheck: *W,CBYNAM (./tic.v,26|0): Port connections for instance 'pd2' of module 'position_decoder' should be made by name rather than by positional ordered list.
+illegal_move_detector imd_unit(
+|
+halcheck: *W,CBYNAM (./tic.v,27|0): Port connections for instance 'imd_unit' of module 'illegal_move_detector' should be made by name rather than by positional ordered list.
+nospace_detector nsd_unit(
+|
+halcheck: *W,CBYNAM (./tic.v,32|0): Port connections for instance 'nsd_unit' of module 'nospace_detector' should be made by name rather than by positional ordered list.
+fsm_controller tic_tac_toe_controller(
+|
+halcheck: *W,CBYNAM (./tic.v,36|0): Port connections for instance 'tic_tac_toe_controller' of module 'fsm_controller' should be made by name rather than by positional ordered list.
+input [3:0] computer_position,player_position,
+|
+halcheck: *W,STYVAL (./tic.v,6|0): Numeric value '3' used for identifier 'computer_position'. Use constants to avoid portability issues.
+input [3:0] computer_position,player_position,
+|
+halcheck: *N,DECLIN (./tic.v,6|0): Use a separate line for each HDL declaration.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos1' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,STYVAL (./tic.v,7|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos2' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *N,DECLIN (./tic.v,7|0): Use a separate line for each HDL declaration.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos3' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos4' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos5' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos6' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos7' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos8' has a numeric value suffix.
+output wire [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,7|0): Identifier 'pos9' has a numeric value suffix.
+output wire [1:0]who
+|
+halcheck: *W,STYVAL (./tic.v,8|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+wire [15:0] PC_en;
+|
+halcheck: *W,LCVARN (./tic.v,10|0): Net name 'PC_en' uses uppercase characters.
+wire [15:0] PC_en;
+|
+halcheck: *W,STYVAL (./tic.v,10|0): Numeric value '15' used for identifier 'PC_en'. Use constants to avoid portability issues.
+wire [15:0] PL_en;
+|
+halcheck: *W,LCVARN (./tic.v,11|0): Net name 'PL_en' uses uppercase characters.
+wire [15:0] PL_en;
+|
+halcheck: *W,STYVAL (./tic.v,11|0): Numeric value '15' used for identifier 'PL_en'. Use constants to avoid portability issues.
+position_registers position_reg_unit(
+|
+halcheck: *N,IDLENG (./tic.v,17|0): Identifier name 'position_reg_unit' is not of appropriate length (4 to 16 characters).
+module position_registers(
+|
+halcheck: *N,IDLENG (./tic.v,49|0): Identifier name 'position_registers' is not of appropriate length (4 to 16 characters).
+module position_registers(
+|
+halcheck: *W,DIFFMN (./tic.v,49|0): Module name 'position_registers' differs from file name 'tic.v'.
+module position_registers(
+|
+halcheck: *W,MULTMF (./tic.v,49|0): More than one design-unit definition in file 'tic.v'.
+module position_registers(
+|
+halcheck: *N,PRTCNT (./tic.v,49|0): Module/Entity 'position_registers' contains '14' ports.
+halcheck: (./tic.v,49): Number of Input ports: 5.
+halcheck: (./tic.v,49): Number of Output ports: 9.
+input [8:0] PC_en,
+|
+halcheck: *W,STYVAL (./tic.v,53|0): Numeric value '8' used for identifier 'PC_en'. Use constants to avoid portability issues.
+input [8:0] PL_en,
+|
+halcheck: *W,STYVAL (./tic.v,54|0): Numeric value '8' used for identifier 'PL_en'. Use constants to avoid portability issues.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos1' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,STYVAL (./tic.v,55|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos2' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *N,DECLIN (./tic.v,55|0): Use a separate line for each HDL declaration.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos3' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos4' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos5' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos6' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos7' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos8' has a numeric value suffix.
+output reg[1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9
+|
+halcheck: *W,NUMSUF (./tic.v,55|0): Identifier 'pos9' has a numeric value suffix.
+input [8:0] PC_en,
+|
+halcheck: *W,LCVARN (./tic.v,53|0): Net name 'PC_en' uses uppercase characters.
+input [8:0] PL_en,
+|
+halcheck: *W,LCVARN (./tic.v,54|0): Net name 'PL_en' uses uppercase characters.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,58|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,59|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,62|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[0]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,64|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[0]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,66|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,74|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,75|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,78|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[1]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,80|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[1]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,82|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,90|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,91|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,94|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[2]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,96|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[2]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,98|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,106|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,107|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,110|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[3]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,112|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[3]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,114|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,122|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,123|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,126|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[4]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,128|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[4]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,130|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,138|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,139|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,142|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[5]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,144|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[5]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,146|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,154|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,155|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,158|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[6]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,160|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[6]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,162|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,170|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,171|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,174|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[7]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,176|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[7]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,178|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,186|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,187|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,190|0): Missing begin/end statement in the 'if' block.
+else if(PC_en[8]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,192|0): Missing begin/end statement in the 'if' block.
+else if (PL_en[8]==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,194|0): Missing begin/end statement in the 'if' block.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,DIFFMN (./tic.v,344|0): Module name 'winner_detector' differs from file name 'tic.v'.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,MULTMF (./tic.v,344|0): More than one design-unit definition in file 'tic.v'.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *N,PRTCNT (./tic.v,344|0): Module/Entity 'winner_detector' contains '11' ports.
+halcheck: (./tic.v,344): Number of Input ports: 9.
+halcheck: (./tic.v,344): Number of Output ports: 2.
+winner_detect_3 u1(pos1,pos2,pos3,win1,who1);
+|
+halcheck: *W,CBYNAM (./tic.v,347|0): Port connections for instance 'u1' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u2(pos4,pos5,pos6,win2,who2);
+|
+halcheck: *W,CBYNAM (./tic.v,348|0): Port connections for instance 'u2' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u3(pos7,pos8,pos9,win3,who3);
+|
+halcheck: *W,CBYNAM (./tic.v,349|0): Port connections for instance 'u3' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u4(pos1,pos4,pos7,win4,who4);
+|
+halcheck: *W,CBYNAM (./tic.v,350|0): Port connections for instance 'u4' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u5(pos2,pos5,pos8,win5,who5);
+|
+halcheck: *W,CBYNAM (./tic.v,351|0): Port connections for instance 'u5' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u6(pos3,pos6,pos9,win6,who6);
+|
+halcheck: *W,CBYNAM (./tic.v,352|0): Port connections for instance 'u6' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u7(pos1,pos5,pos9,win7,who7);
+|
+halcheck: *W,CBYNAM (./tic.v,353|0): Port connections for instance 'u7' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+winner_detect_3 u8(pos3,pos5,pos6,win8,who8);
+|
+halcheck: *W,CBYNAM (./tic.v,354|0): Port connections for instance 'u8' of module 'winner_detect_3' should be made by name rather than by positional ordered list.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos1' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,STYVAL (./tic.v,344|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos2' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *N,DECLIN (./tic.v,344|0): Use a separate line for each HDL declaration.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos3' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos4' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos5' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos6' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos7' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos8' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,NUMSUF (./tic.v,344|0): Identifier 'pos9' has a numeric value suffix.
+module winner_detector(input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,output wire winner, output wire [1:0]who);
+|
+halcheck: *W,STYVAL (./tic.v,344|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who1' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,STYVAL (./tic.v,346|0): Numeric value '1' used for identifier 'who1'. Use constants to avoid portability issues.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who2' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who3' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who4' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who5' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who6' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who7' has a numeric value suffix.
+wire [1:0] who1,who2,who3,who4,who5,who6,who7,who8;
+|
+halcheck: *W,NUMSUF (./tic.v,346|0): Identifier 'who8' has a numeric value suffix.
+winner_detect_3 u1(pos1,pos2,pos3,win1,who1);
+|
+halcheck: *N,IDLENG (./tic.v,347|0): Identifier name 'u1' is not of appropriate length (4 to 16 characters).
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,DIFFMN (./tic.v,359|0): Module name 'winner_detect_3' differs from file name 'tic.v'.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,MULTMF (./tic.v,359|0): More than one design-unit definition in file 'tic.v'.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *N,PRTCNT (./tic.v,359|0): Module/Entity 'winner_detect_3' contains '5' ports.
+halcheck: (./tic.v,359): Number of Input ports: 3.
+halcheck: (./tic.v,359): Number of Output ports: 2.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,NUMSUF (./tic.v,359|0): Identifier 'pos0' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,STYVAL (./tic.v,359|0): Numeric value '1' used for identifier 'pos0'. Use constants to avoid portability issues.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,NUMSUF (./tic.v,359|0): Identifier 'pos1' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *N,DECLIN (./tic.v,359|0): Use a separate line for each HDL declaration.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,NUMSUF (./tic.v,359|0): Identifier 'pos2' has a numeric value suffix.
+module winner_detect_3(input [1:0] pos0,pos1,pos2, output wire winner, output wire [1:0] who);
+|
+halcheck: *W,STYVAL (./tic.v,359|0): Numeric value '1' used for identifier 'who'. Use constants to avoid portability issues.
+wire [1:0] temp0, temp1, temp2;
+|
+halcheck: *W,NUMSUF (./tic.v,360|0): Identifier 'temp0' has a numeric value suffix.
+wire [1:0] temp0, temp1, temp2;
+|
+halcheck: *W,STYVAL (./tic.v,360|0): Numeric value '1' used for identifier 'temp0'. Use constants to avoid portability issues.
+wire [1:0] temp0, temp1, temp2;
+|
+halcheck: *W,NUMSUF (./tic.v,360|0): Identifier 'temp1' has a numeric value suffix.
+wire [1:0] temp0, temp1, temp2;
+|
+halcheck: *W,NUMSUF (./tic.v,360|0): Identifier 'temp2' has a numeric value suffix.
+winner_detect_3 u2(pos4,pos5,pos6,win2,who2);
+|
+halcheck: *N,IDLENG (./tic.v,348|0): Identifier name 'u2' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u3(pos7,pos8,pos9,win3,who3);
+|
+halcheck: *N,IDLENG (./tic.v,349|0): Identifier name 'u3' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u4(pos1,pos4,pos7,win4,who4);
+|
+halcheck: *N,IDLENG (./tic.v,350|0): Identifier name 'u4' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u5(pos2,pos5,pos8,win5,who5);
+|
+halcheck: *N,IDLENG (./tic.v,351|0): Identifier name 'u5' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u6(pos3,pos6,pos9,win6,who6);
+|
+halcheck: *N,IDLENG (./tic.v,352|0): Identifier name 'u6' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u7(pos1,pos5,pos9,win7,who7);
+|
+halcheck: *N,IDLENG (./tic.v,353|0): Identifier name 'u7' is not of appropriate length (4 to 16 characters).
+winner_detect_3 u8(pos3,pos5,pos6,win8,who8);
+|
+halcheck: *N,IDLENG (./tic.v,354|0): Identifier name 'u8' is not of appropriate length (4 to 16 characters).
+position_decoder pd1(computer_position,computer_play,PC_en);
+|
+halcheck: *N,IDLENG (./tic.v,25|0): Identifier name 'pd1' is not of appropriate length (4 to 16 characters).
+module position_decoder(input[3:0] in, input enable, output wire [15:0] out_en);
+|
+halcheck: *W,DIFFMN (./tic.v,317|0): Module name 'position_decoder' differs from file name 'tic.v'.
+module position_decoder(input[3:0] in, input enable, output wire [15:0] out_en);
+|
+halcheck: *W,MULTMF (./tic.v,317|0): More than one design-unit definition in file 'tic.v'.
+module position_decoder(input[3:0] in, input enable, output wire [15:0] out_en);
+|
+halcheck: *N,PRTCNT (./tic.v,317|0): Module/Entity 'position_decoder' contains '3' ports.
+halcheck: (./tic.v,317): Number of Input ports: 2.
+halcheck: (./tic.v,317): Number of Output ports: 1.
+module position_decoder(input[3:0] in, input enable, output wire [15:0] out_en);
+|
+halcheck: *W,KEYWOD (./tic.v,317|0): VHDL reserved word 'in' used as an identifier or label.
+module position_decoder(input[3:0] in, input enable, output wire [15:0] out_en);
+|
+halcheck: *N,DECLIN (./tic.v,317|0): Use a separate line for each HDL declaration.
+module position_decoder(input[3:0] in, input enable, output wire [15:0] out_en);
+|
+halcheck: *W,STYVAL (./tic.v,317|0): Numeric value '15' used for identifier 'out_en'. Use constants to avoid portability issues.
+reg[15:0] temp1;
+|
+halcheck: *W,NUMSUF (./tic.v,318|0): Identifier 'temp1' has a numeric value suffix.
+reg[15:0] temp1;
+|
+halcheck: *W,STYVAL (./tic.v,318|0): Numeric value '15' used for identifier 'temp1'. Use constants to avoid portability issues.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,321|0): Each block should be labeled with a meaningful name.
+case(in)
+|
+halcheck: *W,CDEFCV (./tic.v,322|0): The case items of the case statement in module/design-unit pd1 cover all the numerical values of the case expression. The default clause is not required.
+position_decoder pd2(player_position,player_play,PL_en);
+|
+halcheck: *N,IDLENG (./tic.v,26|0): Identifier name 'pd2' is not of appropriate length (4 to 16 characters).
+module illegal_move_detector(
+|
+halcheck: *N,IDLENG (./tic.v,284|0): Identifier name 'illegal_move_detector' is not of appropriate length (4 to 16 characters).
+module illegal_move_detector(
+|
+halcheck: *W,DIFFMN (./tic.v,284|0): Module name 'illegal_move_detector' differs from file name 'tic.v'.
+module illegal_move_detector(
+|
+halcheck: *W,MULTMF (./tic.v,284|0): More than one design-unit definition in file 'tic.v'.
+module illegal_move_detector(
+|
+halcheck: *N,PRTCNT (./tic.v,284|0): Module/Entity 'illegal_move_detector' contains '12' ports.
+halcheck: (./tic.v,284): Number of Input ports: 11.
+halcheck: (./tic.v,284): Number of Output ports: 1.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos1' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,STYVAL (./tic.v,285|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos2' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *N,DECLIN (./tic.v,285|0): Use a separate line for each HDL declaration.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos3' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos4' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos5' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos6' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos7' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos8' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,285|0): Identifier 'pos9' has a numeric value suffix.
+input [8:0] PC_en,PL_en,
+|
+halcheck: *W,STYVAL (./tic.v,286|0): Numeric value '8' used for identifier 'PC_en'. Use constants to avoid portability issues.
+input [8:0] PC_en,PL_en,
+|
+halcheck: *N,DECLIN (./tic.v,286|0): Use a separate line for each HDL declaration.
+input [8:0] PC_en,PL_en,
+|
+halcheck: *W,LCVARN (./tic.v,286|0): Net name 'PC_en' uses uppercase characters.
+input [8:0] PC_en,PL_en,
+|
+halcheck: *W,LCVARN (./tic.v,286|0): Net name 'PL_en' uses uppercase characters.
+input [8:0] PC_en,PL_en,
+|
+halcheck: *W,USEPRT (./tic.v,286|0): The input/inout port 'PC_en' defined in the module 'illegal_move_detector' is unused (neither read nor assigned).
+module nospace_detector(
+|
+halcheck: *W,DIFFMN (./tic.v,267|0): Module name 'nospace_detector' differs from file name 'tic.v'.
+module nospace_detector(
+|
+halcheck: *W,MULTMF (./tic.v,267|0): More than one design-unit definition in file 'tic.v'.
+module nospace_detector(
+|
+halcheck: *N,PRTCNT (./tic.v,267|0): Module/Entity 'nospace_detector' contains '10' ports.
+halcheck: (./tic.v,267): Number of Input ports: 9.
+halcheck: (./tic.v,267): Number of Output ports: 1.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos1' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,STYVAL (./tic.v,268|0): Numeric value '1' used for identifier 'pos1'. Use constants to avoid portability issues.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos2' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *N,DECLIN (./tic.v,268|0): Use a separate line for each HDL declaration.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos3' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos4' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos5' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos6' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos7' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos8' has a numeric value suffix.
+input [1:0] pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,
+|
+halcheck: *W,NUMSUF (./tic.v,268|0): Identifier 'pos9' has a numeric value suffix.
+fsm_controller tic_tac_toe_controller(
+|
+halcheck: *N,IDLENG (./tic.v,36|0): Identifier name 'tic_tac_toe_controller' is not of appropriate length (4 to 16 characters).
+module fsm_controller(
+|
+halcheck: *W,DIFFMN (./tic.v,201|0): Module name 'fsm_controller' differs from file name 'tic.v'.
+module fsm_controller(
+|
+halcheck: *W,MULTMF (./tic.v,201|0): More than one design-unit definition in file 'tic.v'.
+module fsm_controller(
+|
+halcheck: *N,PRTCNT (./tic.v,201|0): Module/Entity 'fsm_controller' contains '9' ports.
+halcheck: (./tic.v,201): Number of Input ports: 7.
+halcheck: (./tic.v,201): Number of Output ports: 2.
+input reset, play,pc,illegal_move, no_space, win,
+|
+halcheck: *N,DECLIN (./tic.v,203|0): Use a separate line for each HDL declaration.
+output reg computer_play,player_play
+|
+halcheck: *N,DECLIN (./tic.v,204|0): Use a separate line for each HDL declaration.
+reg[1:0] current_state,next_state;
+|
+halcheck: *W,STYVAL (./tic.v,210|0): Numeric value '1' used for identifier 'current_state'. Use constants to avoid portability issues.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,212|0): Each block should be labeled with a meaningful name.
+if(reset)
+|
+halcheck: *W,NBGEND (./tic.v,213|0): Missing begin/end statement in the 'if' block.
+begin
+|
+halcheck: *W,NOBLKN (./tic.v,219|0): Each block should be labeled with a meaningful name.
+case(current_state)
+|
+halcheck: *W,CDEFCV (./tic.v,220|0): The case items of the case statement in module/design-unit tic_tac_toe_controller cover all the numerical values of the case expression. The default clause is not required.
+if(reset==1'b0 && play==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,222|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b0)
+|
+halcheck: *W,NBGEND (./tic.v,232|0): Missing begin/end statement in the 'if' block.
+else if(no_space==1 || win==1'b1)
+|
+halcheck: *W,ULCMPE (./tic.v,248|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit tic_tac_toe_controller. LHS operand is 1 bits, RHS operand is 32 bits.
+if(reset==1'b1)
+|
+halcheck: *W,NBGEND (./tic.v,257|0): Missing begin/end statement in the 'if' block.
+if(illegal_move==1'b0)
+|
+halcheck: *N,ALOWID (./tic.v,232|0): Signal/variable name 'illegal_move' does not follow the active-low naming convention : should end with '_n'.
+if(pc==1'b0) begin
+|
+halcheck: *N,ALOWID (./tic.v,239|0): Signal/variable name 'pc' does not follow the active-low naming convention : should end with '_n'.
+wire [15:0] PC_en;
+|
+halcheck: *W,URDWIR (./tic.v,10|0): Wire 'PC_en[15:9]' defined in module 'tic' does not drive any object, but is assigned at least once.
+wire [15:0] PL_en;
+|
+halcheck: *W,URDWIR (./tic.v,11|0): Wire 'PL_en[15:9]' defined in module 'tic' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led1;
+|
+halcheck: *W,URDWIR (./tic_tb.v,8|0): Wire 'pos_led1' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led2;
+|
+halcheck: *W,URDWIR (./tic_tb.v,9|0): Wire 'pos_led2' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led3;
+|
+halcheck: *W,URDWIR (./tic_tb.v,10|0): Wire 'pos_led3' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led4;
+|
+halcheck: *W,URDWIR (./tic_tb.v,11|0): Wire 'pos_led4' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led5;
+|
+halcheck: *W,URDWIR (./tic_tb.v,12|0): Wire 'pos_led5' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led6;
+|
+halcheck: *W,URDWIR (./tic_tb.v,13|0): Wire 'pos_led6' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led7;
+|
+halcheck: *W,URDWIR (./tic_tb.v,14|0): Wire 'pos_led7' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led8;
+|
+halcheck: *W,URDWIR (./tic_tb.v,15|0): Wire 'pos_led8' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] pos_led9;
+|
+halcheck: *W,URDWIR (./tic_tb.v,16|0): Wire 'pos_led9' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+wire [1:0] who;
+|
+halcheck: *W,URDWIR (./tic_tb.v,17|0): Wire 'who' defined in module 'tic_tb' does not drive any object, but is assigned at least once.
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 302.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+always @(*)
+|
+halsynth: *W,NBCOMB (./tic.v,320|0): Non-blocking assignment encountered in a combinational block.
+4'd0: temp1 <= 16'b0000000000000001;
+|
+halsynth: (./tic.v,323|0): Source HDL information for the error/warning mentioned above.
+4'd1: temp1 <= 16'b0000000000000010;
+|
+halsynth: (./tic.v,324|0): Source HDL information for the error/warning mentioned above.
+4'd2: temp1 <= 16'b0000000000000100;
+|
+halsynth: (./tic.v,325|0): Source HDL information for the error/warning mentioned above.
+4'd3: temp1 <= 16'b0000000000001000;
+|
+halsynth: (./tic.v,326|0): Source HDL information for the error/warning mentioned above.
+4'd4: temp1 <= 16'b0000000000010000;
+|
+halsynth: (./tic.v,327|0): Source HDL information for the error/warning mentioned above.
+4'd5: temp1 <= 16'b0000000000100000;
+|
+halsynth: (./tic.v,328|0): Source HDL information for the error/warning mentioned above.
+4'd6: temp1 <= 16'b0000000001000000;
+|
+halsynth: (./tic.v,329|0): Source HDL information for the error/warning mentioned above.
+4'd7: temp1 <= 16'b0000000010000000;
+|
+halsynth: (./tic.v,330|0): Source HDL information for the error/warning mentioned above.
+4'd8: temp1 <= 16'b0000000100000000;
+|
+halsynth: (./tic.v,331|0): Source HDL information for the error/warning mentioned above.
+4'd9: temp1 <= 16'b0000001000000000;
+|
+halsynth: (./tic.v,332|0): Source HDL information for the error/warning mentioned above.
+4'd10: temp1 <=16'b0000010000000000;
+|
+halsynth: (./tic.v,333|0): Source HDL information for the error/warning mentioned above.
+4'd11: temp1 <=16'b0000100000000000;
+|
+halsynth: (./tic.v,334|0): Source HDL information for the error/warning mentioned above.
+4'd12: temp1 <=16'b0001000000000000;
+|
+halsynth: (./tic.v,335|0): Source HDL information for the error/warning mentioned above.
+4'd13: temp1 <=16'b0010000000000000;
+|
+halsynth: (./tic.v,336|0): Source HDL information for the error/warning mentioned above.
+4'd14: temp1 <=16'b0100000000000000;
+|
+halsynth: (./tic.v,337|0): Source HDL information for the error/warning mentioned above.
+4'd15: temp1 <=16'b1000000000000000;
+|
+halsynth: (./tic.v,338|0): Source HDL information for the error/warning mentioned above.
+always @(*)
+|
+halsynth: *W,NBCOMB (./tic.v,218|0): Non-blocking assignment encountered in a combinational block.
+player_play<=1'b0;
+|
+halsynth: (./tic.v,226|0): Source HDL information for the error/warning mentioned above.
+player_play<=1'b1;
+|
+halsynth: (./tic.v,230|0): Source HDL information for the error/warning mentioned above.
+player_play<=1'b0;
+|
+halsynth: (./tic.v,238|0): Source HDL information for the error/warning mentioned above.
+player_play<=1'b0;
+|
+halsynth: (./tic.v,255|0): Source HDL information for the error/warning mentioned above.
+current_state<= next_state;
+|
+halsynth: *N,FSMIDN (./tic.v,216|0): In module/design-unit 'fsm_controller', FSM for state register 'current_state' has been recognized.
+PLAYER:begin
+|
+halsynth: *W,TRNMBT (./tic.v,229|0): For the specified state '1', the state value changes by more than one bits on transition to state(s): 2.
+next_state<=COMPUTER;
+|
+halsynth: (./tic.v,233|0): Source HDL information for the error/warning mentioned above.
+GAME_DONE:begin
+|
+halsynth: *W,TRNMBT (./tic.v,254|0): For the specified state '3', the state value changes by more than one bits on transition to state(s): 0.
+next_state<=IDLE;
+|
+halsynth: (./tic.v,258|0): Source HDL information for the error/warning mentioned above.
+module fsm_controller(
+|
+halsynth: *W,EXTFSM (./tic.v,201|0): Extraneous logic present in module/design-unit 'fsm_controller' that encodes an FSM.
+initial begin
+|
+halsynth: *W,INIUSP (./tic_tb.v,36|0): Module tic_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+initial begin
+|
+halsynth: *W,INIUSP (./tic_tb.v,40|0): Module tic_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 7.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+tic uut(
+|
+halstruct: *E,UNCONI (./tic_tb.v,18|0): Input port 'clock' of entity/module 'tic' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+halstruct: (./tic_tb.v,18): 'clock' mapped to actual expression 'clock' which is undriven.
+tic uut(
+|
+halstruct: *E,UNCONI (./tic_tb.v,18|0): Input port 'reset' of entity/module 'tic' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+halstruct: (./tic_tb.v,18): 'reset' mapped to actual expression 'reset' which is undriven.
+tic uut(
+|
+halstruct: *E,UNCONI (./tic_tb.v,18|0): Input port 'play' of entity/module 'tic' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+halstruct: (./tic_tb.v,18): 'play' mapped to actual expression 'play' which is undriven.
+tic uut(
+|
+halstruct: *E,UNCONI (./tic_tb.v,18|0): Input port 'pc' of entity/module 'tic' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+halstruct: (./tic_tb.v,18): 'pc' mapped to actual expression 'pc' which is undriven.
+tic uut(
+|
+halstruct: *E,UNCONI (./tic_tb.v,18|0): Input port 'computer_position' of entity/module 'tic' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+halstruct: (./tic_tb.v,18): 'computer_position[3:0]' mapped to actual expression 'computer_position' which is undriven.
+tic uut(
+|
+halstruct: *E,UNCONI (./tic_tb.v,18|0): Input port 'player_position' of entity/module 'tic' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+halstruct: (./tic_tb.v,18): 'player_position[3:0]' mapped to actual expression 'player_position' which is undriven.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos1' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos2' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos3' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos4' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos5' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos6' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos7' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos8' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'pos9' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+tic uut(
+|
+halstruct: *W,UNCONO (./tic_tb.v,18|0): Port 'who' (which is being used as an output) of entity/module 'tic' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut'.
+winner_detector win_detect_unit(pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,win,who);
+|
+halstruct: *W,SYNPRT (./tic.v,24|0): Output port 'who' is assigned asynchronously.
+position_decoder pd1(computer_position,computer_play,PC_en);
+|
+halstruct: *W,UNCONO (./tic.v,25|0): Port 'out_en' (which is being used as an output) of entity/module 'position_decoder' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut.pd1'.
+halstruct: (./tic.v,25): 'out_en[15:9]' is not connected.
+position_decoder pd2(player_position,player_play,PL_en);
+|
+halstruct: *W,UNCONO (./tic.v,26|0): Port 'out_en' (which is being used as an output) of entity/module 'position_decoder' is being driven inside the design, but not connected (either partially or completely) in its instance 'tic_tb.uut.pd2'.
+halstruct: (./tic.v,26): 'out_en[15:9]' is not connected.
+module fsm_controller(
+|
+halstruct: *W,SYNASN (./tic.v,201|0): The module/design-unit 'fsm_controller' contains synchronous as well as asynchronous logic.
+halstruct: (./tic.v,260): One instance/occurence of asynchronous logic at 'tic_tb.uut.tic_tac_toe_controller.next_state'.
+halstruct: (./tic.v,216): One instance/occurence of synchronous logic at 'tic_tb.uut.tic_tac_toe_controller.current_state'.
+pos1<=2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,67|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos1' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos1<=2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,67|0): Flip-flop 'pos1' has an asynchronous reset 'reset'.
+input clock,
+|
+halstruct: *N,CLKINF (./tic.v,2|0): Signal 'tic_tb.uut.clock' was inferred as clock.
+halstruct: (./tic.v,2): Clock source is signal 'tic_tb.uut.clock'.
+halstruct: (./tic.v,67): Drives the flip-flop 'tic_tb.uut.position_reg_unit.pos1'.
+pos1<=2'b01;
+|
+halstruct: *W,ACNCPI (./tic.v,67|0): Asynchronous reset 'reset' of latch/flip-flop 'tic_tb.uut.position_reg_unit.pos1' is not controllable from primary inputs.
+pos1<=2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,67|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos1'.
+halstruct: (./tic.v,67): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos1'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos1<=2'b01;
+|
+halstruct: *W,CLKNPI (./tic.v,67|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos1' has clock 'clock' which is not derived from primary input.
+halstruct: (./tic_tb.v,2): Derived from local variable 'clock'.
+pos2<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,83|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos2' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos2<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,83|0): Flip-flop 'pos2' has an asynchronous reset 'reset'.
+pos2<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,83|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos2'.
+halstruct: (./tic.v,83): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos2'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos3<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,99|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos3' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos3<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,99|0): Flip-flop 'pos3' has an asynchronous reset 'reset'.
+pos3<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,99|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos3'.
+halstruct: (./tic.v,99): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos3'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos4<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,115|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos4' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos4<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,115|0): Flip-flop 'pos4' has an asynchronous reset 'reset'.
+pos4<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,115|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos4'.
+halstruct: (./tic.v,115): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos4'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos5<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,131|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos5' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos5<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,131|0): Flip-flop 'pos5' has an asynchronous reset 'reset'.
+pos5<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,131|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos5'.
+halstruct: (./tic.v,131): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos5'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos6<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,147|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos6' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos6<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,147|0): Flip-flop 'pos6' has an asynchronous reset 'reset'.
+pos6<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,147|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos6'.
+halstruct: (./tic.v,147): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos6'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos7<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,163|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos7' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos7<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,163|0): Flip-flop 'pos7' has an asynchronous reset 'reset'.
+pos7<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,163|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos7'.
+halstruct: (./tic.v,163): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos7'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos8<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,179|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos8' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos8<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,179|0): Flip-flop 'pos8' has an asynchronous reset 'reset'.
+pos8<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,179|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos8'.
+halstruct: (./tic.v,179): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos8'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+pos9<= 2'b01;
+|
+halstruct: *W,ASNRST (./tic.v,195|0): Flip-flop 'tic_tb.uut.position_reg_unit.pos9' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+pos9<= 2'b01;
+|
+halstruct: *N,FFASRT (./tic.v,195|0): Flip-flop 'pos9' has an asynchronous reset 'reset'.
+pos9<= 2'b01;
+|
+halstruct: *E,CBPAHI (./tic.v,195|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.position_reg_unit.pos9'.
+halstruct: (./tic.v,195): in instance 'tic_tb.uut.position_reg_unit', combinatorial function of input 'illegal_move' drives 'pos9'.
+halstruct: (./tic.v,17): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'position_reg_unit'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+assign winner=((((((( win1 |win2) | win3) | win4) |win5) |win6) | win7) | win8);
+|
+halstruct: *W,SYNPRT (./tic.v,355|0): Output port 'winner' is assigned asynchronously.
+assign who = ((((((( who1 | who2) | who3) | who4) | who5) | who6) | who7) | who8);
+|
+halstruct: *W,SYNPRT (./tic.v,356|0): Output port 'who' is assigned asynchronously.
+assign winner = temp3 & temp2[1] & temp2[0];
+|
+halstruct: *W,SYNPRT (./tic.v,369|0): Output port 'winner' is assigned asynchronously.
+assign who[0] = winner & pos0[0];
+|
+halstruct: *W,SYNPRT (./tic.v,371|0): Output port 'who[0]' is assigned asynchronously.
+assign who[1] = winner & pos0[1];
+|
+halstruct: *W,SYNPRT (./tic.v,370|0): Output port 'who[1]' is assigned asynchronously.
+assign out_en = (enable==1'b1)?temp1:16'd0;
+|
+halstruct: *W,SYNPRT (./tic.v,319|0): Output port 'out_en' is assigned asynchronously.
+assign illegal_move = temp21 | temp22 ;
+|
+halstruct: *W,SYNPRT (./tic.v,314|0): Output port 'illegal_move' is assigned asynchronously.
+assign temp11 = (pos1[1] | pos1[0]) & PL_en[0];
+|
+halstruct: *W,DALIAS (./tic.v,302|0): Aliased constructs found. Wires 'temp11' and 'temp1' have same drivers.
+halstruct: (./tic.v,292): temp1.
+assign temp12 = (pos2[1] | pos2[0]) & PL_en[1];
+|
+halstruct: *W,DALIAS (./tic.v,303|0): Aliased constructs found. Wires 'temp12' and 'temp2' have same drivers.
+halstruct: (./tic.v,293): temp2.
+assign temp13 = (pos3[1] | pos3[0]) & PL_en[2];
+|
+halstruct: *W,DALIAS (./tic.v,304|0): Aliased constructs found. Wires 'temp13' and 'temp3' have same drivers.
+halstruct: (./tic.v,294): temp3.
+assign temp14 = (pos4[1] | pos4[0]) & PL_en[3];
+|
+halstruct: *W,DALIAS (./tic.v,305|0): Aliased constructs found. Wires 'temp14' and 'temp4' have same drivers.
+halstruct: (./tic.v,295): temp4.
+assign temp15 = (pos5[1] | pos5[0]) & PL_en[4];
+|
+halstruct: *W,DALIAS (./tic.v,306|0): Aliased constructs found. Wires 'temp15' and 'temp5' have same drivers.
+halstruct: (./tic.v,296): temp5.
+assign temp16 = (pos6[1] | pos6[0]) & PL_en[5];
+|
+halstruct: *W,DALIAS (./tic.v,307|0): Aliased constructs found. Wires 'temp16' and 'temp6' have same drivers.
+halstruct: (./tic.v,297): temp6.
+assign temp17 = (pos7[1] | pos7[0]) & PL_en[6];
+|
+halstruct: *W,DALIAS (./tic.v,308|0): Aliased constructs found. Wires 'temp17' and 'temp7' have same drivers.
+halstruct: (./tic.v,298): temp7.
+assign temp18 = (pos8[1] | pos8[0]) & PL_en[7];
+|
+halstruct: *W,DALIAS (./tic.v,309|0): Aliased constructs found. Wires 'temp18' and 'temp8' have same drivers.
+halstruct: (./tic.v,299): temp8.
+assign temp19 = (pos9[1] | pos9[0]) & PL_en[8];
+|
+halstruct: *W,DALIAS (./tic.v,310|0): Aliased constructs found. Wires 'temp19' and 'temp9' have same drivers.
+halstruct: (./tic.v,300): temp9.
+assign no_space =  ((((((((temp1 & temp2) & temp3) & temp4) & temp5) & temp6) & temp7) & temp8) & temp9);
+|
+halstruct: *W,SYNPRT (./tic.v,281|0): Output port 'no_space' is assigned asynchronously.
+computer_play<=1'b0;
+|
+halstruct: *W,SYNPRT (./tic.v,256|0): Output port 'computer_play' is assigned asynchronously.
+player_play<=1'b0;
+|
+halstruct: *W,SYNPRT (./tic.v,255|0): Output port 'player_play' is assigned asynchronously.
+current_state<= next_state;
+|
+halstruct: *W,ASNRST (./tic.v,216|0): Flip-flop 'tic_tb.uut.tic_tac_toe_controller.current_state' has 'active_high' asynchronous set/reset 'reset' as against the recommended 'active_low' style.
+current_state<= next_state;
+|
+halstruct: *N,FFASRT (./tic.v,216|0): Flip-flop 'current_state' has an asynchronous reset 'reset'.
+current_state<= next_state;
+|
+halstruct: *W,ACNCPI (./tic.v,216|0): Asynchronous reset 'reset' of latch/flip-flop 'tic_tb.uut.tic_tac_toe_controller.current_state' is not controllable from primary inputs.
+current_state<= next_state;
+|
+halstruct: *E,CBPAHI (./tic.v,216|0): Combinatorial path crossing multiple units drives 'tic_tb.uut.tic_tac_toe_controller.current_state'.
+halstruct: (./tic.v,216): in instance 'tic_tb.uut.tic_tac_toe_controller', 'next_state' drives 'current_state'.
+halstruct: (./tic.v,260): in instance 'tic_tb.uut.tic_tac_toe_controller', combinatorial function of input 'illegal_move' drives 'next_state'.
+halstruct: (./tic.v,36): in instance 'tic_tb.uut', 'illegal_move' drives input 'illegal_move' of instance 'tic_tac_toe_controller'.
+halstruct: (./tic.v,27): in instance 'tic_tb.uut', output 'illegal_move' of instance 'imd_unit' drives 'illegal_move'.
+halstruct: (./tic.v,314): in instance 'tic_tb.uut.imd_unit', combinatorial function drives 'illegal_move'.
+next_state<=IDLE;
+|
+halstruct: *N,CLKINF (./tic.v,258|0): Signal 'tic_tb.uut.tic_tac_toe_controller.mux(current_state)' was inferred as clock.
+halstruct: (./tic.v,258): Clock source is signal 'tic_tb.uut.tic_tac_toe_controller.mux(current_state)'.
+halstruct: (./tic.v,260): Drives the latch 'tic_tb.uut.tic_tac_toe_controller.next_state'.
+next_state<=GAME_DONE;
+|
+halstruct: *W,LENCPI (./tic.v,260|0): Enable of latch 'tic_tb.uut.tic_tac_toe_controller.next_state' is not controllable from primary inputs.
+next_state<=GAME_DONE;
+|
+halstruct: *W,RSTDAT (./tic.v,260|0): Reset signal 'tic_tb.uut.tic_tac_toe_controller.reset' drives the data pin of flip-flop 'tic_tb.uut.tic_tac_toe_controller.next_state'.
+computer_play<=1'b0;
+|
+halstruct: *N,CLKINF (./tic.v,256|0): Signal 'tic_tb.uut.tic_tac_toe_controller.mux(current_state)' was inferred as clock.
+halstruct: (./tic.v,256): Clock source is signal 'tic_tb.uut.tic_tac_toe_controller.mux(current_state)'.
+halstruct: (./tic.v,256): Drives the latch 'tic_tb.uut.tic_tac_toe_controller.computer_play'.
+computer_play<=1'b0;
+|
+halstruct: *W,LENCPI (./tic.v,256|0): Enable of latch 'tic_tb.uut.tic_tac_toe_controller.computer_play' is not controllable from primary inputs.
+computer_play<=1'b0;
+|
+halstruct: *W,LATINF (./tic.v,256|0): Process/always block models a latch, or signal 'computer_play' is not assigned a value in all branches.
+next_state<=GAME_DONE;
+|
+halstruct: *W,LATINF (./tic.v,260|0): Process/always block models a latch, or signal 'next_state' is not assigned a value in all branches.
+module tic_tb;
+|
+halstruct: *N,NUMDFF (./tic_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 20.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 16.
+halstruct: Total warnings = 51.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (16)
+  CBPAHI (10)     UNCONI (6)     
+
+ Warnings : (360)
+  ACNCPI (2)      ASNRST (10)     CBYNAM (15)     CDEFCV (2)     
+  CLKNPI (1)      CONSBS (4)      DALIAS (9)      DIFFMN (7)     
+  EMPSTM (6)      EXTFSM (1)      IMPDTC (28)     INIUSP (2)     
+  INTTOB (20)     KEYWOD (1)      LATINF (2)      LCVARN (6)     
+  LENCPI (2)      MAXLEN (7)      MULTMF (7)      NBCOMB (2)     
+  NBGEND (40)     NEEDIO (1)      NOBLKN (14)     NUMSUF (69)    
+  RSTDAT (1)      SEPLIN (1)      STYVAL (32)     SYNASN (1)     
+  SYNPRT (11)     TRNMBT (2)      TRUNCZ (28)     ULCMPE (1)     
+  UNCONO (12)     URDWIR (12)     USEPRT (1)     
+
+ Notes    : (52)
+  ALOWID (2)      CLKINF (3)      DECLIN (11)     FFASRT (10)    
+  FSMIDN (1)      IDLENG (16)     NUMDFF (1)      PRTCNT (8)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld25/01fe19bec096/Ass_tictactoe/cds.lib -sortby severity -sortby category -sortby tag hal.log
+

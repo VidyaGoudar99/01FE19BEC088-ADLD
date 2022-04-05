@@ -1,0 +1,29 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Apr 04, 2022 at 16:34:42 IST
+irun
+	-access +rwc
+	tic.v
+	tic_tb.v
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tic_tb
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		               Instances  Unique
+		Modules:              17       9
+		Registers:            21      20
+		Scalar wires:        118       -
+		Expanded wires:       16       1
+		Vectored wires:       16       -
+		Always blocks:        13      12
+		Initial blocks:        2       2
+		Cont. assignments:    53      44
+		Pseudo assignments:    8       8
+	Writing initial simulation snapshot: worklib.tic_tb:v
+Loading snapshot worklib.tic_tb:v .................... Done
+ncsim> source /cad_area/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+TOOL:	irun(64)	15.20-s051: Exiting on Apr 04, 2022 at 16:36:14 IST  (total: 00:01:32)
